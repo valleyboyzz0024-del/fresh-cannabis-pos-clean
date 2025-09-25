@@ -11,8 +11,14 @@ REM Replace useHeaderConfigProps.js with our stub
 echo Replacing useHeaderConfigProps.js with stub...
 node replace-header-config.js
 
-REM Clear cache
-echo Clearing cache...
+REM Fix React Native Paper theme
+echo Fixing React Native Paper theme...
+node fix-paper-theme.js
+
+REM Clear cache completely
+echo Clearing cache completely...
+if exist "node_modules\.cache" rmdir /s /q node_modules\.cache
+if exist ".expo" rmdir /s /q .expo
 call npx expo start --clear
 
 echo Press Ctrl+C when the QR code appears, then scan it on your device
