@@ -20,6 +20,7 @@ import { theme } from '../theme/theme';
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
+// Simple header configuration that doesn't rely on complex font processing
 const screenOptions = {
   headerStyle: {
     backgroundColor: theme.colors.surface,
@@ -46,22 +47,22 @@ const SalesStack = () => (
     <Stack.Screen 
       name="SalesMain" 
       component={SalesScreen} 
-      options={{ title: 'Sales' }} 
+      options={{ title: 'Sales', headerShown: true }} 
     />
     <Stack.Screen 
       name="Cart" 
       component={CartScreen} 
-      options={{ title: 'Shopping Cart' }} 
+      options={{ title: 'Shopping Cart', headerShown: true }} 
     />
     <Stack.Screen 
       name="SaleDetail" 
       component={SaleDetailScreen} 
-      options={{ title: 'Sale Details' }} 
+      options={{ title: 'Sale Details', headerShown: true }} 
     />
     <Stack.Screen 
       name="ProductDetail" 
       component={ProductDetailScreen} 
-      options={{ title: 'Product Details' }} 
+      options={{ title: 'Product Details', headerShown: true }} 
     />
   </Stack.Navigator>
 );
@@ -71,12 +72,12 @@ const InventoryStack = () => (
     <Stack.Screen 
       name="InventoryMain" 
       component={InventoryScreen} 
-      options={{ title: 'Inventory' }} 
+      options={{ title: 'Inventory', headerShown: true }} 
     />
     <Stack.Screen 
       name="ProductDetail" 
       component={ProductDetailScreen} 
-      options={{ title: 'Product Details' }} 
+      options={{ title: 'Product Details', headerShown: true }} 
     />
   </Stack.Navigator>
 );
@@ -86,12 +87,12 @@ const SettingsStack = () => (
     <Stack.Screen 
       name="SettingsMain" 
       component={SettingsScreen} 
-      options={{ title: 'Settings' }} 
+      options={{ title: 'Settings', headerShown: true }} 
     />
     <Stack.Screen 
       name="CashFloat" 
       component={CashFloatScreen} 
-      options={{ title: 'Cash Float Management' }} 
+      options={{ title: 'Cash Float Management', headerShown: true }} 
     />
   </Stack.Navigator>
 );
@@ -123,6 +124,7 @@ const MainTabs = () => (
       name="Dashboard" 
       component={DashboardScreen} 
       options={{
+        headerShown: true,
         tabBarIcon: ({ color, size }) => (
           <MaterialCommunityIcons name="view-dashboard" color={color} size={size} />
         ),
@@ -163,20 +165,30 @@ const MainTabs = () => (
 
 const AppNavigator = () => {
   return (
-    <NavigationContainer theme={{
-      dark: true,
-      colors: {
-        primary: theme.colors.primary,
-        background: theme.colors.background,
-        card: theme.colors.surface,
-        text: theme.colors.text,
-        border: theme.colors.border,
-        notification: theme.colors.notification,
-      },
-    }}>
+    <NavigationContainer
+      theme={{
+        dark: true,
+        colors: {
+          primary: theme.colors.primary,
+          background: theme.colors.background,
+          card: theme.colors.surface,
+          text: theme.colors.text,
+          border: theme.colors.border,
+          notification: theme.colors.notification,
+        },
+      }}
+    >
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="Login" component={LoginScreen} />
-        <Stack.Screen name="Main" component={MainTabs} />
+        <Stack.Screen 
+          name="Login" 
+          component={LoginScreen} 
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen 
+          name="Main" 
+          component={MainTabs} 
+          options={{ headerShown: false }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
