@@ -15,8 +15,14 @@ fi
 echo "Replacing useHeaderConfigProps.js with stub..."
 node replace-header-config.js
 
+# Fix React Native Paper theme
+echo "Fixing React Native Paper theme..."
+node fix-paper-theme.js
+
 # Clear cache
-echo "Clearing cache..."
+echo "Clearing cache completely..."
+rm -rf node_modules/.cache
+rm -rf .expo
 npx expo start --clear
 
 # Exit the expo process after it starts

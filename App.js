@@ -124,6 +124,9 @@ export default function App() {
     );
   }
   
+  // Force theme.fontVariant to be 'regular' right before rendering
+  theme.fontVariant = 'regular';
+  
   return (
     <SafeAreaProvider>
       <PaperProvider theme={theme}>
