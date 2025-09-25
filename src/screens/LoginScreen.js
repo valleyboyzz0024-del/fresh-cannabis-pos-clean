@@ -58,7 +58,7 @@ const LoginScreen = ({ navigation }) => {
         <Surface style={styles.loginContainer}>
           <View style={styles.logoContainer}>
             <Title style={styles.appTitle}>Cannabis POS</Title>
-            <Text style={styles.appSubtitle}>Point of Sale System</Text>
+            <Text variant="bodyMedium" style={styles.appSubtitle}>Point of Sale System</Text>
           </View>
           
           <View style={styles.formContainer}>
@@ -71,7 +71,6 @@ const LoginScreen = ({ navigation }) => {
               autoCapitalize="none"
               left={<TextInput.Icon icon="account" color={theme.colors.primary} />}
             />
-            
             <TextInput
               label="Password"
               value={password}
@@ -102,7 +101,7 @@ const LoginScreen = ({ navigation }) => {
               Login
             </Button>
             
-            <Text style={styles.helpText}>
+            <Text variant="bodyMedium" style={styles.helpText}>
               Default login: admin / admin123
             </Text>
           </View>

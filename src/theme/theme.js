@@ -56,10 +56,7 @@ export const theme = {
       fontFamily: 'System',
       fontWeight: 'normal',
     },
-    bodySmall: {
-      fontFamily: 'System',
-      fontWeight: 'normal',
-    },
+    bodySmall: 'regular', // Changed to string 'regular' to match RN Paper's expected variant
     labelLarge: {
       fontFamily: 'System',
       fontWeight: 'normal',
