@@ -20,79 +20,63 @@ import { theme } from '../theme/theme';
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
-// Simple header configuration that doesn't rely on complex font processing
-const screenOptions = {
-  headerStyle: {
-    backgroundColor: theme.colors.surface,
-  },
-  headerTintColor: theme.colors.primary,
-  headerTitleStyle: {
-    fontWeight: 'bold',
-  },
-  headerShadowVisible: false,
-};
-
-const tabBarOptions = {
-  activeTintColor: theme.colors.primary,
-  inactiveTintColor: theme.colors.disabled,
-  style: {
-    backgroundColor: theme.colors.surface,
-    borderTopWidth: 0,
-    elevation: 0,
-  },
+// Simple static header configuration
+const staticHeader = {
+  title: 'Cannabis POS',
+  headerShown: false
 };
 
 const SalesStack = () => (
-  <Stack.Navigator screenOptions={screenOptions}>
+  <Stack.Navigator screenOptions={{ headerShown: false }}>
     <Stack.Screen 
       name="SalesMain" 
       component={SalesScreen} 
-      options={{ title: 'Sales', headerShown: true }} 
+      options={{ headerShown: false }} 
     />
     <Stack.Screen 
       name="Cart" 
       component={CartScreen} 
-      options={{ title: 'Shopping Cart', headerShown: true }} 
+      options={{ headerShown: false }} 
     />
     <Stack.Screen 
       name="SaleDetail" 
       component={SaleDetailScreen} 
-      options={{ title: 'Sale Details', headerShown: true }} 
+      options={{ headerShown: false }} 
     />
     <Stack.Screen 
       name="ProductDetail" 
       component={ProductDetailScreen} 
-      options={{ title: 'Product Details', headerShown: true }} 
+      options={{ headerShown: false }} 
     />
   </Stack.Navigator>
 );
 
 const InventoryStack = () => (
-  <Stack.Navigator screenOptions={screenOptions}>
+  <Stack.Navigator screenOptions={{ headerShown: false }}>
     <Stack.Screen 
       name="InventoryMain" 
       component={InventoryScreen} 
-      options={{ title: 'Inventory', headerShown: true }} 
+      options={{ headerShown: false }} 
     />
     <Stack.Screen 
       name="ProductDetail" 
       component={ProductDetailScreen} 
-      options={{ title: 'Product Details', headerShown: true }} 
+      options={{ headerShown: false }} 
     />
   </Stack.Navigator>
 );
 
 const SettingsStack = () => (
-  <Stack.Navigator screenOptions={screenOptions}>
+  <Stack.Navigator screenOptions={{ headerShown: false }}>
     <Stack.Screen 
       name="SettingsMain" 
       component={SettingsScreen} 
-      options={{ title: 'Settings', headerShown: true }} 
+      options={{ headerShown: false }} 
     />
     <Stack.Screen 
       name="CashFloat" 
       component={CashFloatScreen} 
-      options={{ title: 'Cash Float Management', headerShown: true }} 
+      options={{ headerShown: false }} 
     />
   </Stack.Navigator>
 );
@@ -100,6 +84,7 @@ const SettingsStack = () => (
 const MainTabs = () => (
   <Tab.Navigator
     screenOptions={{
+      headerShown: false,
       tabBarActiveTintColor: theme.colors.primary,
       tabBarInactiveTintColor: theme.colors.disabled,
       tabBarStyle: {
@@ -109,22 +94,14 @@ const MainTabs = () => (
         height: 60,
         paddingBottom: 8,
         paddingTop: 8,
-      },
-      headerStyle: {
-        backgroundColor: theme.colors.surface,
-      },
-      headerTintColor: theme.colors.primary,
-      headerTitleStyle: {
-        fontWeight: 'bold',
-      },
-      headerShadowVisible: false,
+      }
     }}
   >
     <Tab.Screen 
       name="Dashboard" 
       component={DashboardScreen} 
       options={{
-        headerShown: true,
+        headerShown: false,
         tabBarIcon: ({ color, size }) => (
           <MaterialCommunityIcons name="view-dashboard" color={color} size={size} />
         ),
