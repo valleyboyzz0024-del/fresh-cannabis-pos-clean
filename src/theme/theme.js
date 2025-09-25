@@ -1,11 +1,13 @@
 import { DefaultTheme } from 'react-native-paper';
 
-// Simplified theme configuration that doesn't use configureFonts
+// Extremely simplified theme with explicit fontVariant
 export const theme = {
   ...DefaultTheme,
   dark: true,
   mode: 'adaptive',
   roundness: 10,
+  // Explicitly define fontVariant to prevent undefined errors
+  fontVariant: 'regular',
   colors: {
     ...DefaultTheme.colors,
     primary: '#D4AF37', // Gold

@@ -20,67 +20,31 @@ import { theme } from '../theme/theme';
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
-// Simple static header configuration
-const staticHeader = {
-  title: 'Cannabis POS',
-  headerShown: false
-};
-
+// Extremely simplified stack navigators with no header configuration
 const SalesStack = () => (
   <Stack.Navigator screenOptions={{ headerShown: false }}>
-    <Stack.Screen 
-      name="SalesMain" 
-      component={SalesScreen} 
-      options={{ headerShown: false }} 
-    />
-    <Stack.Screen 
-      name="Cart" 
-      component={CartScreen} 
-      options={{ headerShown: false }} 
-    />
-    <Stack.Screen 
-      name="SaleDetail" 
-      component={SaleDetailScreen} 
-      options={{ headerShown: false }} 
-    />
-    <Stack.Screen 
-      name="ProductDetail" 
-      component={ProductDetailScreen} 
-      options={{ headerShown: false }} 
-    />
+    <Stack.Screen name="SalesMain" component={SalesScreen} />
+    <Stack.Screen name="Cart" component={CartScreen} />
+    <Stack.Screen name="SaleDetail" component={SaleDetailScreen} />
+    <Stack.Screen name="ProductDetail" component={ProductDetailScreen} />
   </Stack.Navigator>
 );
 
 const InventoryStack = () => (
   <Stack.Navigator screenOptions={{ headerShown: false }}>
-    <Stack.Screen 
-      name="InventoryMain" 
-      component={InventoryScreen} 
-      options={{ headerShown: false }} 
-    />
-    <Stack.Screen 
-      name="ProductDetail" 
-      component={ProductDetailScreen} 
-      options={{ headerShown: false }} 
-    />
+    <Stack.Screen name="InventoryMain" component={InventoryScreen} />
+    <Stack.Screen name="ProductDetail" component={ProductDetailScreen} />
   </Stack.Navigator>
 );
 
 const SettingsStack = () => (
   <Stack.Navigator screenOptions={{ headerShown: false }}>
-    <Stack.Screen 
-      name="SettingsMain" 
-      component={SettingsScreen} 
-      options={{ headerShown: false }} 
-    />
-    <Stack.Screen 
-      name="CashFloat" 
-      component={CashFloatScreen} 
-      options={{ headerShown: false }} 
-    />
+    <Stack.Screen name="SettingsMain" component={SettingsScreen} />
+    <Stack.Screen name="CashFloat" component={CashFloatScreen} />
   </Stack.Navigator>
 );
 
+// Simplified tab navigator with no header configuration
 const MainTabs = () => (
   <Tab.Navigator
     screenOptions={{
@@ -101,7 +65,6 @@ const MainTabs = () => (
       name="Dashboard" 
       component={DashboardScreen} 
       options={{
-        headerShown: false,
         tabBarIcon: ({ color, size }) => (
           <MaterialCommunityIcons name="view-dashboard" color={color} size={size} />
         ),
@@ -111,7 +74,6 @@ const MainTabs = () => (
       name="Sales" 
       component={SalesStack} 
       options={{
-        headerShown: false,
         tabBarIcon: ({ color, size }) => (
           <MaterialCommunityIcons name="cash-register" color={color} size={size} />
         ),
@@ -121,7 +83,6 @@ const MainTabs = () => (
       name="Inventory" 
       component={InventoryStack} 
       options={{
-        headerShown: false,
         tabBarIcon: ({ color, size }) => (
           <MaterialCommunityIcons name="package-variant-closed" color={color} size={size} />
         ),
@@ -131,7 +92,6 @@ const MainTabs = () => (
       name="Settings" 
       component={SettingsStack} 
       options={{
-        headerShown: false,
         tabBarIcon: ({ color, size }) => (
           <MaterialCommunityIcons name="cog" color={color} size={size} />
         ),
@@ -140,6 +100,7 @@ const MainTabs = () => (
   </Tab.Navigator>
 );
 
+// Simple navigation container with no complex configuration
 const AppNavigator = () => {
   return (
     <NavigationContainer
@@ -156,16 +117,8 @@ const AppNavigator = () => {
       }}
     >
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-        <Stack.Screen 
-          name="Login" 
-          component={LoginScreen} 
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen 
-          name="Main" 
-          component={MainTabs} 
-          options={{ headerShown: false }}
-        />
+        <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="Main" component={MainTabs} />
       </Stack.Navigator>
     </NavigationContainer>
   );

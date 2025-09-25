@@ -1,4 +1,4 @@
-  import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { StatusBar, LogBox, View, Text, ActivityIndicator } from 'react-native';
 import { Provider as PaperProvider } from 'react-native-paper';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
@@ -18,12 +18,18 @@ export default function App() {
   const [dbInitialized, setDbInitialized] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [navigationReady, setNavigationReady] = useState(false);
   
+  // Force theme.fontVariant to be 'regular' at startup
+  if (!theme.fontVariant) {
+    theme.fontVariant = 'regular';
+  }
+
+  // Initialize database
   useEffect(() => {
     const initApp = async () => {
       try {
         console.log('Initializing database...');
-        // Initialize database
         await initDatabase();
         console.log('Database initialized successfully');
         setDbInitialized(true);
@@ -37,7 +43,18 @@ export default function App() {
     
     initApp();
   }, []);
-  
+
+  // Add a delay before rendering navigation to ensure everything is ready
+  useEffect(() => {
+    if (!loading && !error) {
+      const timer = setTimeout(() => {
+        setNavigationReady(true);
+      }, 500); // Wait 500ms before rendering navigation
+      
+      return () => clearTimeout(timer);
+    }
+  }, [loading, error]);
+
   if (loading) {
     return (
       <View style={{ 
@@ -81,6 +98,27 @@ export default function App() {
           textAlign: 'center'
         }}>
           If the problem persists, please clear the app data and try again.
+        </Text>
+      </View>
+    );
+  }
+  
+  // Show a loading screen while waiting for navigation to be ready
+  if (!navigationReady) {
+    return (
+      <View style={{ 
+        flex: 1, 
+        justifyContent: 'center', 
+        alignItems: 'center',
+        backgroundColor: theme.colors.background
+      }}>
+        <ActivityIndicator size="large" color={theme.colors.primary} />
+        <Text style={{ 
+          marginTop: 20, 
+          color: theme.colors.text,
+          fontSize: 16
+        }}>
+          Preparing Navigation...
         </Text>
       </View>
     );
