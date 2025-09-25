@@ -1,24 +1,6 @@
-import { DefaultTheme, configureFonts } from 'react-native-paper';
+import { DefaultTheme } from 'react-native-paper';
 
-const fontConfig = {
-  regular: {
-    fontFamily: 'System',
-    fontWeight: 'normal',
-  },
-  medium: {
-    fontFamily: 'System',
-    fontWeight: '500',
-  },
-  light: {
-    fontFamily: 'System',
-    fontWeight: '300',
-  },
-  thin: {
-    fontFamily: 'System',
-    fontWeight: '100',
-  },
-};
-
+// Simplified theme configuration that doesn't use configureFonts
 export const theme = {
   ...DefaultTheme,
   dark: true,
@@ -44,7 +26,33 @@ export const theme = {
     card: '#1E1E1E',
     border: '#2E2E2E',
   },
-  fonts: configureFonts({ config: fontConfig }),
+  // Use simple font configuration without complex processing
+  fonts: {
+    regular: {
+      fontFamily: 'System',
+      fontWeight: 'normal',
+    },
+    medium: {
+      fontFamily: 'System',
+      fontWeight: '500',
+    },
+    light: {
+      fontFamily: 'System',
+      fontWeight: '300',
+    },
+    thin: {
+      fontFamily: 'System',
+      fontWeight: '100',
+    },
+    bold: {
+      fontFamily: 'System',
+      fontWeight: 'bold',
+    },
+    heavy: {
+      fontFamily: 'System',
+      fontWeight: '900',
+    }
+  },
 };
 
 export const buttonStyles = {
