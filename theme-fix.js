@@ -33,7 +33,6 @@ export const theme = {
   
   // Use simple font configuration without complex processing
   fonts: {
-    // Basic variants
     regular: {
       fontFamily: 'System',
       fontWeight: 'normal',
@@ -58,8 +57,6 @@ export const theme = {
       fontFamily: 'System',
       fontWeight: '900',
     },
-    
-    // Body variants
     bodySmall: {
       fontFamily: 'System',
       fontWeight: 'normal',
@@ -75,8 +72,6 @@ export const theme = {
       fontWeight: 'normal',
       fontSize: 16,
     },
-    
-    // Title variants
     titleSmall: {
       fontFamily: 'System',
       fontWeight: '500',
@@ -92,8 +87,6 @@ export const theme = {
       fontWeight: '500',
       fontSize: 20,
     },
-    
-    // Label variants
     labelSmall: {
       fontFamily: 'System',
       fontWeight: '500',
@@ -109,40 +102,6 @@ export const theme = {
       fontWeight: '500',
       fontSize: 14,
     },
-    
-    // Heading variants
-    headlineSmall: {
-      fontFamily: 'System',
-      fontWeight: 'bold',
-      fontSize: 24,
-    },
-    headlineMedium: {
-      fontFamily: 'System',
-      fontWeight: 'bold',
-      fontSize: 28,
-    },
-    headlineLarge: {
-      fontFamily: 'System',
-      fontWeight: 'bold',
-      fontSize: 32,
-    },
-    
-    // Display variants
-    displaySmall: {
-      fontFamily: 'System',
-      fontWeight: 'bold',
-      fontSize: 36,
-    },
-    displayMedium: {
-      fontFamily: 'System',
-      fontWeight: 'bold',
-      fontSize: 45,
-    },
-    displayLarge: {
-      fontFamily: 'System',
-      fontWeight: 'bold',
-      fontSize: 57,
-    }
   }
 };
 
