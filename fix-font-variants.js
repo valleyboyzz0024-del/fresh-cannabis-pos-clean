@@ -1,38 +1,35 @@
-import { DefaultTheme } from 'react-native-paper';
+const fs = require('fs');
+const path = require('path');
 
-// Completely simplified theme with NO variants to prevent crashes
-export const theme = {
-  ...DefaultTheme,
-  dark: true,
-  mode: 'adaptive',
-  roundness: 10,
-  
-  // Explicitly define fontVariant to prevent undefined errors
-  fontVariant: 'regular',
-  
-  colors: {
-    ...DefaultTheme.colors,
-    primary: '#D4AF37', // Gold
-    accent: '#D4AF37',  // Gold
-    background: '#121212',
-    surface: '#1E1E1E',
-    text: '#FFFFFF',
-    disabled: '#757575',
-    placeholder: '#9E9E9E',
-    backdrop: 'rgba(0, 0, 0, 0.5)',
-    notification: '#D4AF37',
-    error: '#CF6679',
-    success: '#4CAF50',
-    warning: '#FF9800',
-    info: '#2196F3',
-    onSurface: '#FFFFFF',
-    secondaryContainer: '#2E2E2E',
-    card: '#1E1E1E',
-    border: '#2E2E2E',
-  },
-  
-  // Use simple font configuration without complex processing
-  fonts: {
+// Path to the theme.js file
+const themePath = path.join(__dirname, 'src', 'theme', 'theme.js');
+
+// Function to update the theme.js file with missing font variants
+function addMissingFontVariants() {
+  try {
+    // Read the theme.js file
+    let content = fs.readFileSync(themePath, 'utf8');
+    
+    // Check if the file already has the font variants
+    if (content.includes('bodySmall:')) {
+      console.log('Font variants already added to theme.js');
+      return false;
+    }
+    
+    // Find the fonts object in the theme.js file
+    const fontsRegex = /fonts:\s*{([^}]*)}/s;
+    const match = content.match(fontsRegex);
+    
+    if (!match) {
+      console.error('Could not find fonts object in theme.js');
+      return false;
+    }
+    
+    // Current fonts object content
+    const currentFonts = match[1];
+    
+    // New fonts object with additional variants
+    const newFonts = `fonts: {
       // Basic variants
       regular: {
         fontFamily: 'System',
@@ -143,71 +140,21 @@ export const theme = {
         fontWeight: 'bold',
         fontSize: 57,
       },
-    },
-    medium: {
-      fontFamily: 'System',
-      fontWeight: '500',
-    },
-    light: {
-      fontFamily: 'System',
-      fontWeight: '300',
-    },
-    thin: {
-      fontFamily: 'System',
-      fontWeight: '100',
-    },
-    bold: {
-      fontFamily: 'System',
-      fontWeight: 'bold',
-    },
-    heavy: {
-      fontFamily: 'System',
-      fontWeight: '900',
-    }
-  },
-};
+    }`;
+    
+    // Replace the fonts object in the theme.js file
+    content = content.replace(fontsRegex, newFonts);
+    
+    // Write the updated content back to the file
+    fs.writeFileSync(themePath, content);
+    
+    console.log('Successfully added missing font variants to theme.js');
+    return true;
+  } catch (error) {
+    console.error('Error updating theme.js:', error);
+    return false;
+  }
+}
 
-export const buttonStyles = {
-  large: {
-    height: 60,
-    marginVertical: 10,
-    borderRadius: 10,
-    justifyContent: 'center',
-  },
-  medium: {
-    height: 50,
-    marginVertical: 8,
-    borderRadius: 8,
-    justifyContent: 'center',
-  },
-  small: {
-    height: 40,
-    marginVertical: 5,
-    borderRadius: 6,
-    justifyContent: 'center',
-  },
-};
-
-export const shadowStyles = {
-  small: {
-    boxShadowColor: '#000',
-    boxShadowOffset: { width: 0, height: 2 },
-    boxShadowOpacity: 0.25,
-    boxShadowRadius: 3.84,
-    elevation: 2,
-  },
-  medium: {
-    boxShadowColor: '#000',
-    boxShadowOffset: { width: 0, height: 4 },
-    boxShadowOpacity: 0.3,
-    boxShadowRadius: 4.65,
-    elevation: 4,
-  },
-  large: {
-    boxShadowColor: '#000',
-    boxShadowOffset: { width: 0, height: 6 },
-    boxShadowOpacity: 0.37,
-    boxShadowRadius: 7.49,
-    elevation: 6,
-  },
-};
+// Execute the function
+addMissingFontVariants();

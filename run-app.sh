@@ -14,6 +14,8 @@ node fix-useEffect-imports.js
 node fix-shadow-props.js
 node fix-pointer-events.js
 node fix-all-warnings.js
+node fix-font-variants.js
+node fix-touchable-without-feedback.js
 
 # Clear cache
 rm -rf node_modules/.cache
