@@ -83,24 +83,24 @@ export const buttonStyles = {
 
 export const shadowStyles = {
   small: {
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
+    boxShadowColor: '#000',
+    boxShadowOffset: { width: 0, height: 2 },
+    boxShadowOpacity: 0.25,
+    boxShadowRadius: 3.84,
     elevation: 2,
   },
   medium: {
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.3,
-    shadowRadius: 4.65,
+    boxShadowColor: '#000',
+    boxShadowOffset: { width: 0, height: 4 },
+    boxShadowOpacity: 0.3,
+    boxShadowRadius: 4.65,
     elevation: 4,
   },
   large: {
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 6 },
-    shadowOpacity: 0.37,
-    shadowRadius: 7.49,
+    boxShadowColor: '#000',
+    boxShadowOffset: { width: 0, height: 6 },
+    boxShadowOpacity: 0.37,
+    boxShadowRadius: 7.49,
     elevation: 6,
   },
 };
