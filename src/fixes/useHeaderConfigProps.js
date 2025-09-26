@@ -1,4 +1,3 @@
-// Patched version of useHeaderConfigProps.js that checks for undefined navigation and route
 import { getHeaderTitle, HeaderTitle } from '@react-navigation/elements';
 import { useLocale, useTheme } from '@react-navigation/native';
 import { Platform, StyleSheet, View } from 'react-native';
@@ -41,8 +40,15 @@ export function useHeaderConfigProps({
     };
   }
 
+  const theme = useTheme();
+  // Defensive patch: always provide theme.fonts.regular
+  if (!theme.fonts || !theme.fonts.regular) {
+    theme.fonts = theme.fonts || {};
+    theme.fonts.regular = { fontFamily: 'System', fontWeight: 'normal' };
+  }
+
   const { direction } = useLocale();
-  const { colors } = useTheme();
+  const { colors } = theme;
   
   // Simple implementation that doesn't rely on complex font processing
   const tintColor = headerTintColor ?? (Platform.OS === 'ios' ? colors.primary : colors.text);
@@ -53,10 +59,10 @@ export function useHeaderConfigProps({
   const headerStyleFlattened = StyleSheet.flatten(headerStyle) || {};
   const headerLargeStyleFlattened = StyleSheet.flatten(headerLargeStyle) || {};
   
-  // Simple font processing that doesn't rely on complex logic
-  const backTitleFontFamily = headerBackTitleStyleFlattened.fontFamily;
-  const largeTitleFontFamily = headerLargeTitleStyleFlattened.fontFamily;
-  const titleFontFamily = headerTitleStyleFlattened.fontFamily;
+  // Defensive fontFamily fallback for all header titles
+  const backTitleFontFamily = headerBackTitleStyleFlattened.fontFamily || theme.fonts.regular.fontFamily;
+  const largeTitleFontFamily = headerLargeTitleStyleFlattened.fontFamily || theme.fonts.regular.fontFamily;
+  const titleFontFamily = headerTitleStyleFlattened.fontFamily || theme.fonts.regular.fontFamily;
   
   const backTitleFontSize = 'fontSize' in headerBackTitleStyleFlattened ? headerBackTitleStyleFlattened.fontSize : undefined;
   
@@ -80,6 +86,8 @@ export function useHeaderConfigProps({
   
   if (headerTitleStyleFlattened.fontFamily != null) {
     headerTitleStyleSupported.fontFamily = headerTitleStyleFlattened.fontFamily;
+  } else {
+    headerTitleStyleSupported.fontFamily = theme.fonts.regular.fontFamily;
   }
   
   if (titleFontSize != null) {
