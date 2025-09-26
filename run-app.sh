@@ -10,6 +10,10 @@ node fix-paper-theme.js
 node fix-text-component-complete.js
 node fix-text-imports.js
 node replace-header-config.js
+node fix-useEffect-imports.js
+node fix-shadow-props.js
+node fix-pointer-events.js
+node fix-all-warnings.js
 
 # Clear cache
 rm -rf node_modules/.cache
