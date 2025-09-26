@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { 
-  StyleSheet, 
-  View, 
-  ScrollView, 
+  StyleSheet,
+  View,
+  ScrollView,
   Alert,
-  Linking
+  Linking,
+  Text
 } from 'react-native';
 import { 
-  Text, 
-  Surface, 
-  Title, 
-  Button, 
+  Surface,
+  Title,
+  Button,
   Divider,
   List,
   Switch,
@@ -86,8 +86,7 @@ const SettingsScreen = ({ navigation }) => {
             await signOut();
             navigation.reset({
               index: 0,
-              routes: [{ name: 'Login' }],
-            });
+              routes: [{ name: 'Login' }] });
           },
           style: 'destructive'
         }
@@ -232,45 +231,34 @@ const SettingsScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: theme.colors.background,
-  },
+    backgroundColor: theme.colors.background },
   contentContainer: {
     padding: 16,
-    paddingBottom: 24,
-  },
+    paddingBottom: 24 },
   section: {
     borderRadius: 10,
     padding: 16,
     marginBottom: 16,
-    backgroundColor: theme.colors.surface,
-  },
+    backgroundColor: theme.colors.surface },
   sectionTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: theme.colors.primary,
-  },
+    color: theme.colors.primary },
   divider: {
-    marginVertical: 12,
-  },
+    marginVertical: 12 },
   logoutButton: {
     marginTop: 8,
     backgroundColor: theme.colors.error,
-    borderRadius: 8,
-  },
+    borderRadius: 8 },
   logoutButtonContent: {
-    height: 50,
-  },
+    height: 50 },
   dialog: {
     backgroundColor: theme.colors.surface,
-    borderRadius: 15,
-  },
+    borderRadius: 15 },
   dialogTitle: {
-    color: theme.colors.primary,
-  },
+    color: theme.colors.primary },
   dialogInput: {
     marginBottom: 16,
-    backgroundColor: theme.colors.surface,
-  },
-});
+    backgroundColor: theme.colors.surface } });
 
 export default SettingsScreen;

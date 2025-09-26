@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 import { 
-  StyleSheet, 
-  View, 
-  FlatList, 
+  StyleSheet,
+  View,
+  FlatList,
   Alert,
   ScrollView,
   KeyboardAvoidingView,
-  Platform
+  Platform,
+  Text
 } from 'react-native';
 import { 
-  Text, 
-  Surface, 
-  Title, 
-  Button, 
-  IconButton, 
+  Surface,
+  Title,
+  Button,
+  IconButton,
   Divider,
   TextInput,
   ActivityIndicator,
@@ -289,156 +289,122 @@ const CartScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: theme.colors.background,
-  },
+    backgroundColor: theme.colors.background },
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: 16,
-    backgroundColor: theme.colors.surface,
-  },
+    backgroundColor: theme.colors.surface },
   headerTitle: {
     fontSize: 20,
     fontWeight: 'bold',
-    color: theme.colors.primary,
-  },
+    color: theme.colors.primary },
   cartList: {
-    padding: 16,
-  },
+    padding: 16 },
   cartItem: {
     borderRadius: 10,
     marginBottom: 12,
     padding: 16,
-    backgroundColor: theme.colors.surface,
-  },
+    backgroundColor: theme.colors.surface },
   itemDetails: {
-    marginBottom: 12,
-  },
+    marginBottom: 12 },
   itemName: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: theme.colors.text,
-  },
+    color: theme.colors.text },
   itemCategory: {
     fontSize: 14,
     color: theme.colors.text,
     opacity: 0.7,
-    marginBottom: 4,
-  },
+    marginBottom: 4 },
   itemPrice: {
     fontSize: 14,
-    color: theme.colors.primary,
-  },
+    color: theme.colors.primary },
   itemActions: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
-  },
+    justifyContent: 'space-between' },
   quantityContainer: {
     flexDirection: 'row',
-    alignItems: 'center',
-  },
+    alignItems: 'center' },
   quantityButton: {
-    margin: 0,
-  },
+    margin: 0 },
   quantityInput: {
     width: 40,
     height: 40,
     textAlign: 'center',
-    backgroundColor: theme.colors.surface,
-  },
+    backgroundColor: theme.colors.surface },
   itemTotal: {
     fontSize: 16,
     fontWeight: 'bold',
     color: theme.colors.primary,
     marginLeft: 'auto',
-    marginRight: 16,
-  },
+    marginRight: 16 },
   deleteButton: {
-    margin: 0,
-  },
+    margin: 0 },
   emptyState: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 20,
-  },
+    padding: 20 },
   emptyStateText: {
     fontSize: 16,
     color: theme.colors.text,
     opacity: 0.7,
     marginTop: 16,
-    marginBottom: 24,
-  },
+    marginBottom: 24 },
   browseButton: {
-    backgroundColor: theme.colors.primary,
-  },
+    backgroundColor: theme.colors.primary },
   browseButtonContent: {
-    height: 50,
-  },
+    height: 50 },
   summaryContainer: {
     padding: 16,
     backgroundColor: theme.colors.surface,
     borderTopLeftRadius: 15,
-    borderTopRightRadius: 15,
-  },
+    borderTopRightRadius: 15 },
   summaryRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginVertical: 4,
-  },
+    marginVertical: 4 },
   summaryLabel: {
     fontSize: 14,
     color: theme.colors.text,
-    opacity: 0.7,
-  },
+    opacity: 0.7 },
   summaryValue: {
     fontSize: 14,
-    color: theme.colors.text,
-  },
+    color: theme.colors.text },
   divider: {
-    marginVertical: 8,
-  },
+    marginVertical: 8 },
   totalLabel: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: theme.colors.text,
-  },
+    color: theme.colors.text },
   totalValue: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: theme.colors.primary,
-  },
+    color: theme.colors.primary },
   checkoutButton: {
     marginTop: 16,
     backgroundColor: theme.colors.primary,
-    borderRadius: 8,
-  },
+    borderRadius: 8 },
   checkoutButtonContent: {
-    height: 50,
-  },
+    height: 50 },
   dialog: {
     backgroundColor: theme.colors.surface,
-    borderRadius: 15,
-  },
+    borderRadius: 15 },
   dialogTitle: {
-    color: theme.colors.primary,
-  },
+    color: theme.colors.primary },
   dialogText: {
     color: theme.colors.text,
     fontSize: 16,
-    marginBottom: 8,
-  },
+    marginBottom: 8 },
   dialogSubtext: {
     color: theme.colors.text,
-    opacity: 0.7,
-  },
+    opacity: 0.7 },
   successIcon: {
     alignItems: 'center',
-    marginBottom: 16,
-  },
-});
+    marginBottom: 16 } });
 
 export default CartScreen;

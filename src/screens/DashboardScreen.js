@@ -1,10 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { StyleSheet, View, ScrollView, RefreshControl } from 'react-native';
+import React, { useState } from 'react';
 import { 
-  Text, 
-  Surface, 
-  Title, 
-  Divider, 
+  StyleSheet,
+  View,
+  ScrollView,
+  RefreshControl,
+  Text
+} from 'react-native';
+import { 
+  Surface,
+  Title,
+  Divider,
   ActivityIndicator,
   Button,
   IconButton,
@@ -246,50 +251,41 @@ const DashboardScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: theme.colors.background,
-  },
+    backgroundColor: theme.colors.background },
   contentContainer: {
-    padding: 16,
-  },
+    padding: 16 },
   loadingContainer: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: theme.colors.background,
-  },
+    backgroundColor: theme.colors.background },
   loadingText: {
     marginTop: 10,
-    color: theme.colors.text,
-  },
+    color: theme.colors.text },
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: 16,
-  },
+    marginBottom: 16 },
   headerTitle: {
     fontSize: 24,
     fontWeight: 'bold',
-    color: theme.colors.primary,
-  },
+    color: theme.colors.primary },
   headerSubtitle: {
     fontSize: 14,
     color: theme.colors.text,
-    opacity: 0.7,
-  },
+    opacity: 0.7 },
   statsContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginBottom: 16,
-  },
+    marginBottom: 16 },
   statCard: {
     flex: 1,
     padding: 16,
     borderRadius: 10,
     marginHorizontal: 4,
     backgroundColor: theme.colors.surface,
-    alignItems: 'center',
-  },
+    alignItems: 'center' },
   statIconContainer: {
     width: 40,
     height: 40,
@@ -297,66 +293,52 @@ const styles = StyleSheet.create({
     backgroundColor: theme.colors.background,
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: 8,
-  },
+    marginBottom: 8 },
   statLabel: {
     fontSize: 12,
     color: theme.colors.text,
     opacity: 0.7,
-    marginBottom: 4,
-  },
+    marginBottom: 4 },
   statValue: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: theme.colors.primary,
-  },
+    color: theme.colors.primary },
   section: {
     borderRadius: 10,
     marginBottom: 16,
     backgroundColor: theme.colors.surface,
-    overflow: 'hidden',
-  },
+    overflow: 'hidden' },
   sectionHeader: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: 16,
-  },
+    padding: 16 },
   sectionTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: theme.colors.primary,
-  },
+    color: theme.colors.primary },
   quickActions: {
     flexDirection: 'row',
     justifyContent: 'space-around',
     padding: 16,
-    flexWrap: 'wrap',
-  },
+    flexWrap: 'wrap' },
   actionButton: {
     marginVertical: 8,
     minWidth: '30%',
-    backgroundColor: theme.colors.primary,
-  },
+    backgroundColor: theme.colors.primary },
   actionButtonContent: {
-    height: 50,
-  },
+    height: 50 },
   emptyState: {
     padding: 20,
-    alignItems: 'center',
-  },
+    alignItems: 'center' },
   emptyStateText: {
     color: theme.colors.text,
-    opacity: 0.7,
-  },
+    opacity: 0.7 },
   productSales: {
     color: theme.colors.primary,
-    fontWeight: 'bold',
-  },
+    fontWeight: 'bold' },
   saleAmount: {
     color: theme.colors.primary,
-    fontWeight: 'bold',
-  },
-});
+    fontWeight: 'bold' } });
 
 export default DashboardScreen;

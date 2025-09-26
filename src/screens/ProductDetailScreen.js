@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { 
-  StyleSheet, 
-  View, 
-  ScrollView, 
-  Alert
+  StyleSheet,
+  View,
+  ScrollView,
+  Alert,
+  Text
 } from 'react-native';
 import { 
-  Text, 
-  Surface, 
-  Title, 
-  Button, 
+  Surface,
+  Title,
+  Button,
   Divider,
   ActivityIndicator,
   Chip,
@@ -398,150 +398,116 @@ const ProductDetailScreen = ({ route, navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: theme.colors.background,
-  },
+    backgroundColor: theme.colors.background },
   contentContainer: {
-    padding: 16,
-  },
+    padding: 16 },
   loadingContainer: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: theme.colors.background,
-  },
+    backgroundColor: theme.colors.background },
   loadingText: {
     marginTop: 10,
-    color: theme.colors.text,
-  },
+    color: theme.colors.text },
   errorContainer: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
-    backgroundColor: theme.colors.background,
-  },
+    backgroundColor: theme.colors.background },
   errorText: {
     marginTop: 16,
     marginBottom: 24,
     color: theme.colors.text,
     fontSize: 16,
-    textAlign: 'center',
-  },
+    textAlign: 'center' },
   retryButton: {
-    backgroundColor: theme.colors.primary,
-  },
+    backgroundColor: theme.colors.primary },
   backButton: {
-    backgroundColor: theme.colors.primary,
-  },
+    backgroundColor: theme.colors.primary },
   productCard: {
     borderRadius: 10,
     padding: 16,
-    backgroundColor: theme.colors.surface,
-  },
+    backgroundColor: theme.colors.surface },
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center',
-  },
+    alignItems: 'center' },
   productName: {
     fontSize: 24,
     fontWeight: 'bold',
     color: theme.colors.primary,
-    flex: 1,
-  },
+    flex: 1 },
   categoryContainer: {
-    marginTop: 8,
-  },
+    marginTop: 8 },
   chipContainer: {
     flexDirection: 'row',
-    flexWrap: 'wrap',
-  },
+    flexWrap: 'wrap' },
   chip: {
     marginRight: 8,
     marginBottom: 8,
-    backgroundColor: theme.colors.background,
-  },
+    backgroundColor: theme.colors.background },
   divider: {
-    marginVertical: 16,
-  },
+    marginVertical: 16 },
   detailsContainer: {
-    marginBottom: 16,
-  },
+    marginBottom: 16 },
   detailRow: {
-    marginBottom: 12,
-  },
+    marginBottom: 12 },
   detailLabel: {
     fontSize: 14,
     color: theme.colors.text,
     opacity: 0.7,
-    marginBottom: 4,
-  },
+    marginBottom: 4 },
   detailValue: {
     fontSize: 16,
-    color: theme.colors.text,
-  },
+    color: theme.colors.text },
   lowStock: {
-    color: theme.colors.error,
-  },
+    color: theme.colors.error },
   descriptionText: {
     fontSize: 14,
     color: theme.colors.text,
-    lineHeight: 20,
-  },
+    lineHeight: 20 },
   actions: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginTop: 8,
-  },
+    marginTop: 8 },
   quantityContainer: {
     flexDirection: 'row',
-    alignItems: 'center',
-  },
+    alignItems: 'center' },
   quantityButton: {
-    margin: 0,
-  },
+    margin: 0 },
   quantityInput: {
     width: 60,
     height: 40,
     textAlign: 'center',
-    backgroundColor: theme.colors.surface,
-  },
+    backgroundColor: theme.colors.surface },
   addToCartButton: {
     flex: 1,
     marginLeft: 16,
     backgroundColor: theme.colors.primary,
-    borderRadius: 8,
-  },
+    borderRadius: 8 },
   buttonContent: {
-    height: 50,
-  },
+    height: 50 },
   input: {
     backgroundColor: theme.colors.surface,
-    marginBottom: 8,
-  },
+    marginBottom: 8 },
   row: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
+    justifyContent: 'space-between' },
   halfInput: {
-    width: '48%',
-  },
+    width: '48%' },
   editActions: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginTop: 16,
-  },
+    marginTop: 16 },
   cancelButton: {
     flex: 1,
     marginRight: 8,
-    borderColor: theme.colors.primary,
-  },
+    borderColor: theme.colors.primary },
   saveButton: {
     flex: 1,
     marginLeft: 8,
-    backgroundColor: theme.colors.primary,
-  },
-});
+    backgroundColor: theme.colors.primary } });
 
 export default ProductDetailScreen;
