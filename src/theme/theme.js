@@ -33,116 +33,10 @@ export const theme = {
   
   // Use simple font configuration without complex processing
   fonts: {
-      // Basic variants
-      regular: {
-        fontFamily: 'System',
-        fontWeight: 'normal',
-      },
-      medium: {
-        fontFamily: 'System',
-        fontWeight: '500',
-      },
-      light: {
-        fontFamily: 'System',
-        fontWeight: '300',
-      },
-      thin: {
-        fontFamily: 'System',
-        fontWeight: '100',
-      },
-      bold: {
-        fontFamily: 'System',
-        fontWeight: 'bold',
-      },
-      heavy: {
-        fontFamily: 'System',
-        fontWeight: '900',
-      },
-      
-      // Body variants
-      bodySmall: {
-        fontFamily: 'System',
-        fontWeight: 'normal',
-        fontSize: 12,
-      },
-      bodyMedium: {
-        fontFamily: 'System',
-        fontWeight: 'normal',
-        fontSize: 14,
-      },
-      bodyLarge: {
-        fontFamily: 'System',
-        fontWeight: 'normal',
-        fontSize: 16,
-      },
-      
-      // Title variants
-      titleSmall: {
-        fontFamily: 'System',
-        fontWeight: '500',
-        fontSize: 14,
-      },
-      titleMedium: {
-        fontFamily: 'System',
-        fontWeight: '500',
-        fontSize: 16,
-      },
-      titleLarge: {
-        fontFamily: 'System',
-        fontWeight: '500',
-        fontSize: 20,
-      },
-      
-      // Label variants
-      labelSmall: {
-        fontFamily: 'System',
-        fontWeight: '500',
-        fontSize: 10,
-      },
-      labelMedium: {
-        fontFamily: 'System',
-        fontWeight: '500',
-        fontSize: 12,
-      },
-      labelLarge: {
-        fontFamily: 'System',
-        fontWeight: '500',
-        fontSize: 14,
-      },
-      
-      // Heading variants
-      headlineSmall: {
-        fontFamily: 'System',
-        fontWeight: 'bold',
-        fontSize: 24,
-      },
-      headlineMedium: {
-        fontFamily: 'System',
-        fontWeight: 'bold',
-        fontSize: 28,
-      },
-      headlineLarge: {
-        fontFamily: 'System',
-        fontWeight: 'bold',
-        fontSize: 32,
-      },
-      
-      // Display variants
-      displaySmall: {
-        fontFamily: 'System',
-        fontWeight: 'bold',
-        fontSize: 36,
-      },
-      displayMedium: {
-        fontFamily: 'System',
-        fontWeight: 'bold',
-        fontSize: 45,
-      },
-      displayLarge: {
-        fontFamily: 'System',
-        fontWeight: 'bold',
-        fontSize: 57,
-      },
+    // Basic variants
+    regular: {
+      fontFamily: 'System',
+      fontWeight: 'normal',
     },
     medium: {
       fontFamily: 'System',
@@ -163,8 +57,93 @@ export const theme = {
     heavy: {
       fontFamily: 'System',
       fontWeight: '900',
+    },
+    
+    // Body variants
+    bodySmall: {
+      fontFamily: 'System',
+      fontWeight: 'normal',
+      fontSize: 12,
+    },
+    bodyMedium: {
+      fontFamily: 'System',
+      fontWeight: 'normal',
+      fontSize: 14,
+    },
+    bodyLarge: {
+      fontFamily: 'System',
+      fontWeight: 'normal',
+      fontSize: 16,
+    },
+    
+    // Title variants
+    titleSmall: {
+      fontFamily: 'System',
+      fontWeight: '500',
+      fontSize: 14,
+    },
+    titleMedium: {
+      fontFamily: 'System',
+      fontWeight: '500',
+      fontSize: 16,
+    },
+    titleLarge: {
+      fontFamily: 'System',
+      fontWeight: '500',
+      fontSize: 20,
+    },
+    
+    // Label variants
+    labelSmall: {
+      fontFamily: 'System',
+      fontWeight: '500',
+      fontSize: 10,
+    },
+    labelMedium: {
+      fontFamily: 'System',
+      fontWeight: '500',
+      fontSize: 12,
+    },
+    labelLarge: {
+      fontFamily: 'System',
+      fontWeight: '500',
+      fontSize: 14,
+    },
+    
+    // Heading variants
+    headlineSmall: {
+      fontFamily: 'System',
+      fontWeight: 'bold',
+      fontSize: 24,
+    },
+    headlineMedium: {
+      fontFamily: 'System',
+      fontWeight: 'bold',
+      fontSize: 28,
+    },
+    headlineLarge: {
+      fontFamily: 'System',
+      fontWeight: 'bold',
+      fontSize: 32,
+    },
+    
+    // Display variants
+    displaySmall: {
+      fontFamily: 'System',
+      fontWeight: 'bold',
+      fontSize: 36,
+    },
+    displayMedium: {
+      fontFamily: 'System',
+      fontWeight: 'bold',
+      fontSize: 45,
+    },
+    displayLarge: {
+      fontFamily: 'System',
+      fontWeight: 'bold',
+      fontSize: 57,
     }
-  },
+  }
 };
 
 export const buttonStyles = {
