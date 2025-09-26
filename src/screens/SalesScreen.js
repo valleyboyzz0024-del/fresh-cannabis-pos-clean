@@ -1,21 +1,21 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState } from 'react';
 import { 
-  StyleSheet, 
-  View, 
-  FlatList, 
-  TouchableOpacity, 
+  StyleSheet,
+  View,
+  FlatList,
+  TouchableOpacity,
   RefreshControl,
   Dimensions,
   Platform,
-  Alert
+  Alert,
+  Text
 } from 'react-native';
 import { 
-  Text, 
-  Surface, 
-  Title, 
-  Searchbar, 
-  Button, 
-  FAB, 
+  Surface,
+  Title,
+  Searchbar,
+  Button,
+  FAB,
   Chip,
   ActivityIndicator,
   IconButton,
@@ -371,105 +371,81 @@ const SalesScreen = ({ navigation }) => {
   );
 };
 
-import { ScrollView } from 'react-native';
+import { ScrollView  } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: theme.colors.background,
-  },
+    backgroundColor: theme.colors.background },
   header: {
     padding: 16,
-    backgroundColor: theme.colors.surface,
-  },
+    backgroundColor: theme.colors.surface },
   searchBar: {
     backgroundColor: theme.colors.background,
-    elevation: 2,
-  },
+    elevation: 2 },
   filtersContainer: {
     backgroundColor: theme.colors.surface,
-    paddingBottom: 8,
-  },
+    paddingBottom: 8 },
   filtersScroll: {
     paddingHorizontal: 8,
-    marginBottom: 8,
-  },
+    marginBottom: 8 },
   filterChip: {
     marginHorizontal: 4,
-    backgroundColor: theme.colors.background,
-  },
+    backgroundColor: theme.colors.background },
   selectedChip: {
-    backgroundColor: theme.colors.primary,
-  },
+    backgroundColor: theme.colors.primary },
   filterChipText: {
-    color: theme.colors.text,
-  },
+    color: theme.colors.text },
   selectedChipText: {
-    color: '#000000',
-  },
+    color: '#000000' },
   loadingContainer: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
-  },
+    alignItems: 'center' },
   loadingText: {
     marginTop: 10,
-    color: theme.colors.text,
-  },
+    color: theme.colors.text },
   productsList: {
-    padding: 16,
-  },
+    padding: 16 },
   productCard: {
     borderRadius: 10,
     marginBottom: 12,
     backgroundColor: theme.colors.surface,
-    overflow: 'hidden',
-  },
+    overflow: 'hidden' },
   productCardContent: {
     flexDirection: 'row',
-    padding: 16,
-  },
+    padding: 16 },
   productInfo: {
-    flex: 1,
-  },
+    flex: 1 },
   productName: {
     fontSize: 16,
     fontWeight: 'bold',
     marginBottom: 4,
-    color: theme.colors.text,
-  },
+    color: theme.colors.text },
   productMeta: {
     flexDirection: 'row',
-    marginBottom: 8,
-  },
+    marginBottom: 8 },
   productChip: {
     marginRight: 8,
     height: 24,
-    backgroundColor: theme.colors.background,
-  },
+    backgroundColor: theme.colors.background },
   productChipText: {
-    fontSize: 10,
-  },
+    fontSize: 10 },
   productPrice: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: theme.colors.primary,
-  },
+    color: theme.colors.primary },
   productActions: {
-    justifyContent: 'center',
-  },
+    justifyContent: 'center' },
   addButton: {
-    margin: 0,
-  },
+    margin: 0 },
   emptyState: {
     alignItems: 'center',
     justifyContent: 'center',
-    padding: 40,
-  },
+    padding: 40 },
   emptyStateText: {
     marginTop: 10,
-    color: theme.colors.disabled,
-  },
+    color: theme.colors.disabled },
   cartPreview: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -477,54 +453,42 @@ const styles = StyleSheet.create({
     padding: 16,
     backgroundColor: theme.colors.surface,
     borderTopLeftRadius: 15,
-    borderTopRightRadius: 15,
-  },
+    borderTopRightRadius: 15 },
   cartInfo: {
-    flex: 1,
-  },
+    flex: 1 },
   cartItemCount: {
     fontSize: 14,
     color: theme.colors.text,
-    opacity: 0.7,
-  },
+    opacity: 0.7 },
   cartTotal: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: theme.colors.primary,
-  },
+    color: theme.colors.primary },
   viewCartButton: {
     backgroundColor: theme.colors.primary,
-    borderRadius: 8,
-  },
+    borderRadius: 8 },
   viewCartButtonContent: {
-    height: 40,
-  },
+    height: 40 },
   voiceFab: {
     position: 'absolute',
     margin: 16,
     right: 0,
     bottom: 80,
-    backgroundColor: theme.colors.surface,
-  },
+    backgroundColor: theme.colors.surface },
   voiceDialog: {
     backgroundColor: theme.colors.surface,
     borderRadius: 15,
     alignItems: 'center',
-    justifyContent: 'center',
-  },
+    justifyContent: 'center' },
   voiceDialogContent: {
     padding: 24,
-    alignItems: 'center',
-  },
+    alignItems: 'center' },
   voiceDialogText: {
     marginTop: 16,
     textAlign: 'center',
     color: theme.colors.text,
-    fontSize: 16,
-  },
+    fontSize: 16 },
   pulsingIcon: {
-    opacity: 0.8,
-  },
-});
+    opacity: 0.8 } });
 
 export default SalesScreen;

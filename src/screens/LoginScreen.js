@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { 
-  StyleSheet, 
-  View, 
-  Image, 
-  KeyboardAvoidingView, 
-  Platform, 
-  TouchableWithoutFeedback, 
+  StyleSheet,
+  View,
+  Image,
+  KeyboardAvoidingView,
+  Platform,
+  TouchableWithoutFeedback,
   Keyboard,
   StatusBar,
-  Dimensions
+  Dimensions,
+  Text
 } from 'react-native';
 import { 
-  TextInput, 
-  Button, 
-  Text, 
-  Surface, 
+  TextInput,
+  Button,
+  Surface,
   ActivityIndicator,
   Title
 } from 'react-native-paper';
@@ -117,56 +117,44 @@ const styles = StyleSheet.create({
     backgroundColor: theme.colors.background,
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 20,
-  },
+    padding: 20 },
   loginContainer: {
     width: width > 500 ? 450 : '100%',
     padding: 30,
     borderRadius: 15,
     backgroundColor: theme.colors.surface,
-    ...shadowStyles.large,
-  },
+    ...shadowStyles.large },
   logoContainer: {
     alignItems: 'center',
-    marginBottom: 30,
-  },
+    marginBottom: 30 },
   appTitle: {
     fontSize: 28,
     fontWeight: 'bold',
     color: theme.colors.primary,
-    marginBottom: 5,
-  },
+    marginBottom: 5 },
   appSubtitle: {
     fontSize: 16,
     color: theme.colors.text,
-    opacity: 0.8,
-  },
+    opacity: 0.8 },
   formContainer: {
-    width: '100%',
-  },
+    width: '100%' },
   input: {
     marginBottom: 15,
-    backgroundColor: theme.colors.surface,
-  },
+    backgroundColor: theme.colors.surface },
   loginButton: {
     marginTop: 10,
     borderRadius: 8,
-    backgroundColor: theme.colors.primary,
-  },
+    backgroundColor: theme.colors.primary },
   loginButtonContent: {
-    height: 50,
-  },
+    height: 50 },
   errorText: {
     color: theme.colors.error,
     marginBottom: 10,
-    textAlign: 'center',
-  },
+    textAlign: 'center' },
   helpText: {
     marginTop: 20,
     textAlign: 'center',
     color: theme.colors.text,
-    opacity: 0.7,
-  },
-});
+    opacity: 0.7 } });
 
 export default LoginScreen;

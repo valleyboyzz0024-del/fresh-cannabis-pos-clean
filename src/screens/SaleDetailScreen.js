@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { 
-  StyleSheet, 
-  View, 
-  ScrollView, 
+  StyleSheet,
+  View,
+  ScrollView,
   Share,
-  Platform
+  Platform,
+  Text
 } from 'react-native';
 import { 
-  Text, 
-  Surface, 
-  Title, 
-  Button, 
+  Surface,
+  Title,
+  Button,
   Divider,
   ActivityIndicator,
   List,
@@ -224,185 +224,145 @@ const SaleDetailScreen = ({ route, navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: theme.colors.background,
-  },
+    backgroundColor: theme.colors.background },
   contentContainer: {
-    padding: 16,
-  },
+    padding: 16 },
   loadingContainer: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: theme.colors.background,
-  },
+    backgroundColor: theme.colors.background },
   loadingText: {
     marginTop: 10,
-    color: theme.colors.text,
-  },
+    color: theme.colors.text },
   errorContainer: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
-    backgroundColor: theme.colors.background,
-  },
+    backgroundColor: theme.colors.background },
   errorText: {
     marginTop: 16,
     marginBottom: 24,
     color: theme.colors.text,
     fontSize: 16,
-    textAlign: 'center',
-  },
+    textAlign: 'center' },
   retryButton: {
-    backgroundColor: theme.colors.primary,
-  },
+    backgroundColor: theme.colors.primary },
   backButton: {
-    backgroundColor: theme.colors.primary,
-  },
+    backgroundColor: theme.colors.primary },
   headerCard: {
     borderRadius: 10,
     padding: 16,
     marginBottom: 16,
-    backgroundColor: theme.colors.surface,
-  },
+    backgroundColor: theme.colors.surface },
   headerRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center',
-  },
+    alignItems: 'center' },
   saleTitle: {
     fontSize: 20,
     fontWeight: 'bold',
-    color: theme.colors.primary,
-  },
+    color: theme.colors.primary },
   saleDate: {
     color: theme.colors.text,
-    opacity: 0.7,
-  },
+    opacity: 0.7 },
   divider: {
-    marginVertical: 12,
-  },
+    marginVertical: 12 },
   paymentInfo: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center',
-  },
+    alignItems: 'center' },
   paymentMethod: {
     flexDirection: 'row',
-    alignItems: 'center',
-  },
+    alignItems: 'center' },
   paymentIcon: {
-    marginRight: 8,
-  },
+    marginRight: 8 },
   paymentLabel: {
     color: theme.colors.text,
-    opacity: 0.7,
-  },
+    opacity: 0.7 },
   paymentValue: {
     color: theme.colors.text,
-    textTransform: 'capitalize',
-  },
+    textTransform: 'capitalize' },
   totalLabel: {
     color: theme.colors.text,
     opacity: 0.7,
-    textAlign: 'right',
-  },
+    textAlign: 'right' },
   totalValue: {
     fontSize: 18,
     fontWeight: 'bold',
     color: theme.colors.primary,
-    textAlign: 'right',
-  },
+    textAlign: 'right' },
   itemsCard: {
     borderRadius: 10,
     padding: 16,
     marginBottom: 16,
-    backgroundColor: theme.colors.surface,
-  },
+    backgroundColor: theme.colors.surface },
   itemsTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: theme.colors.primary,
-  },
+    color: theme.colors.primary },
   itemRow: {
     flexDirection: 'row',
     paddingVertical: 12,
     borderBottomWidth: 1,
-    borderBottomColor: theme.colors.background,
-  },
+    borderBottomColor: theme.colors.background },
   itemInfo: {
-    flex: 1,
-  },
+    flex: 1 },
   itemName: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: theme.colors.text,
-  },
+    color: theme.colors.text },
   itemCategory: {
     fontSize: 14,
     color: theme.colors.text,
-    opacity: 0.7,
-  },
+    opacity: 0.7 },
   itemPrice: {
     fontSize: 14,
-    color: theme.colors.primary,
-  },
+    color: theme.colors.primary },
   itemQuantity: {
     width: 40,
     alignItems: 'center',
-    justifyContent: 'center',
-  },
+    justifyContent: 'center' },
   quantityText: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: theme.colors.text,
-  },
+    color: theme.colors.text },
   itemTotal: {
     width: 80,
     alignItems: 'flex-end',
-    justifyContent: 'center',
-  },
+    justifyContent: 'center' },
   itemTotalText: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: theme.colors.primary,
-  },
+    color: theme.colors.primary },
   summaryRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingVertical: 4,
-  },
+    paddingVertical: 4 },
   summaryLabel: {
     fontSize: 14,
     color: theme.colors.text,
-    opacity: 0.7,
-  },
+    opacity: 0.7 },
   summaryValue: {
     fontSize: 14,
-    color: theme.colors.text,
-  },
+    color: theme.colors.text },
   totalSummaryLabel: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: theme.colors.text,
-  },
+    color: theme.colors.text },
   totalSummaryValue: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: theme.colors.primary,
-  },
+    color: theme.colors.primary },
   actions: {
     marginTop: 8,
-    marginBottom: 24,
-  },
+    marginBottom: 24 },
   newSaleButton: {
     backgroundColor: theme.colors.primary,
-    borderRadius: 8,
-  },
+    borderRadius: 8 },
   buttonContent: {
-    height: 50,
-  },
-});
+    height: 50 } });
 
 export default SaleDetailScreen;

@@ -1,19 +1,19 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState } from 'react';
 import { 
-  StyleSheet, 
-  View, 
-  FlatList, 
-  TouchableOpacity, 
+  StyleSheet,
+  View,
+  FlatList,
+  TouchableOpacity,
   RefreshControl,
-  Alert
+  Alert,
+  Text
 } from 'react-native';
 import { 
-  Text, 
-  Surface, 
-  Title, 
-  Searchbar, 
-  Button, 
-  FAB, 
+  Surface,
+  Title,
+  Searchbar,
+  Button,
+  FAB,
   Chip,
   ActivityIndicator,
   IconButton,
@@ -469,51 +469,40 @@ const InventoryScreen = ({ navigation }) => {
   );
 };
 
-import { ScrollView } from 'react-native';
+import { ScrollView  } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: theme.colors.background,
-  },
+    backgroundColor: theme.colors.background },
   header: {
     padding: 16,
-    backgroundColor: theme.colors.surface,
-  },
+    backgroundColor: theme.colors.surface },
   searchBar: {
     backgroundColor: theme.colors.background,
-    elevation: 2,
-  },
+    elevation: 2 },
   filtersContainer: {
     backgroundColor: theme.colors.surface,
-    paddingBottom: 8,
-  },
+    paddingBottom: 8 },
   filtersScroll: {
     paddingHorizontal: 8,
-    marginBottom: 8,
-  },
+    marginBottom: 8 },
   filterChip: {
     marginHorizontal: 4,
-    backgroundColor: theme.colors.background,
-  },
+    backgroundColor: theme.colors.background },
   selectedChip: {
-    backgroundColor: theme.colors.primary,
-  },
+    backgroundColor: theme.colors.primary },
   filterChipText: {
-    color: theme.colors.text,
-  },
+    color: theme.colors.text },
   selectedChipText: {
-    color: '#000000',
-  },
+    color: '#000000' },
   loadingContainer: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
-  },
+    alignItems: 'center' },
   loadingText: {
     marginTop: 10,
-    color: theme.colors.text,
-  },
+    color: theme.colors.text },
   productsList: {
     padding: 16,
     paddingBottom: 80, // Extra padding for FAB
@@ -522,127 +511,95 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginBottom: 12,
     backgroundColor: theme.colors.surface,
-    overflow: 'hidden',
-  },
+    overflow: 'hidden' },
   productCardContent: {
     flexDirection: 'row',
-    padding: 16,
-  },
+    padding: 16 },
   productInfo: {
-    flex: 1,
-  },
+    flex: 1 },
   productName: {
     fontSize: 16,
     fontWeight: 'bold',
     marginBottom: 4,
-    color: theme.colors.text,
-  },
+    color: theme.colors.text },
   productMeta: {
     flexDirection: 'row',
-    marginBottom: 8,
-  },
+    marginBottom: 8 },
   productChip: {
     marginRight: 8,
     height: 24,
-    backgroundColor: theme.colors.background,
-  },
+    backgroundColor: theme.colors.background },
   productChipText: {
-    fontSize: 10,
-  },
+    fontSize: 10 },
   productDetails: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center',
-  },
+    alignItems: 'center' },
   productPrice: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: theme.colors.primary,
-  },
+    color: theme.colors.primary },
   productStock: {
     fontSize: 14,
-    color: theme.colors.text,
-  },
+    color: theme.colors.text },
   lowStock: {
-    color: theme.colors.error,
-  },
+    color: theme.colors.error },
   productActions: {
-    justifyContent: 'center',
-  },
+    justifyContent: 'center' },
   emptyState: {
     alignItems: 'center',
     justifyContent: 'center',
-    padding: 40,
-  },
+    padding: 40 },
   emptyStateText: {
     marginTop: 10,
     marginBottom: 20,
-    color: theme.colors.disabled,
-  },
+    color: theme.colors.disabled },
   addButton: {
-    backgroundColor: theme.colors.primary,
-  },
+    backgroundColor: theme.colors.primary },
   fab: {
     position: 'absolute',
     margin: 16,
     right: 0,
     bottom: 0,
-    backgroundColor: theme.colors.primary,
-  },
+    backgroundColor: theme.colors.primary },
   dialog: {
     backgroundColor: theme.colors.surface,
-    borderRadius: 15,
-  },
+    borderRadius: 15 },
   dialogTitle: {
-    color: theme.colors.primary,
-  },
+    color: theme.colors.primary },
   dialogScrollArea: {
-    maxHeight: 400,
-  },
+    maxHeight: 400 },
   dialogContent: {
-    paddingVertical: 8,
-  },
+    paddingVertical: 8 },
   input: {
     marginBottom: 12,
-    backgroundColor: theme.colors.surface,
-  },
+    backgroundColor: theme.colors.surface },
   row: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
+    justifyContent: 'space-between' },
   halfInput: {
-    width: '48%',
-  },
+    width: '48%' },
   dropdown: {
     marginBottom: 12,
-    width: '100%',
-  },
+    width: '100%' },
   dropdownLabel: {
     fontSize: 14,
     color: theme.colors.text,
     opacity: 0.7,
-    marginBottom: 8,
-  },
+    marginBottom: 8 },
   chipContainer: {
     flexDirection: 'row',
-    flexWrap: 'wrap',
-  },
+    flexWrap: 'wrap' },
   dialogChip: {
     margin: 4,
-    backgroundColor: theme.colors.background,
-  },
+    backgroundColor: theme.colors.background },
   selectedDialogChip: {
-    backgroundColor: theme.colors.primary,
-  },
+    backgroundColor: theme.colors.primary },
   dialogChipText: {
-    color: theme.colors.text,
-  },
+    color: theme.colors.text },
   selectedDialogChipText: {
-    color: '#000000',
-  },
+    color: '#000000' },
   divider: {
-    marginVertical: 12,
-  },
-});
+    marginVertical: 12 } });
 
 export default InventoryScreen;

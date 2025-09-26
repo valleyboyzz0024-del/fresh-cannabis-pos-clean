@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { 
-  StyleSheet, 
-  View, 
-  ScrollView, 
+  StyleSheet,
+  View,
+  ScrollView,
   RefreshControl,
-  Alert
+  Alert,
+  Text
 } from 'react-native';
 import { 
-  Text, 
-  Surface, 
-  Title, 
-  Button, 
+  Surface,
+  Title,
+  Button,
   Divider,
   ActivityIndicator,
   TextInput,
@@ -452,138 +452,107 @@ const CashFloatScreen = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: theme.colors.background,
-  },
+    backgroundColor: theme.colors.background },
   contentContainer: {
     padding: 16,
-    paddingBottom: 24,
-  },
+    paddingBottom: 24 },
   loadingContainer: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: theme.colors.background,
-  },
+    backgroundColor: theme.colors.background },
   loadingText: {
     marginTop: 10,
-    color: theme.colors.text,
-  },
+    color: theme.colors.text },
   section: {
     borderRadius: 10,
     padding: 16,
     marginBottom: 16,
-    backgroundColor: theme.colors.surface,
-  },
+    backgroundColor: theme.colors.surface },
   sectionTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: theme.colors.primary,
-  },
+    color: theme.colors.primary },
   divider: {
-    marginVertical: 12,
-  },
+    marginVertical: 12 },
   floatInfo: {
-    marginBottom: 16,
-  },
+    marginBottom: 16 },
   floatDetail: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     paddingVertical: 8,
     borderBottomWidth: 1,
-    borderBottomColor: theme.colors.background,
-  },
+    borderBottomColor: theme.colors.background },
   floatLabel: {
     fontSize: 14,
     color: theme.colors.text,
-    opacity: 0.7,
-  },
+    opacity: 0.7 },
   floatValue: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: theme.colors.text,
-  },
+    color: theme.colors.text },
   discrepancy: {
-    color: theme.colors.error,
-  },
+    color: theme.colors.error },
   notesContainer: {
     marginBottom: 16,
     padding: 12,
     backgroundColor: theme.colors.background,
-    borderRadius: 8,
-  },
+    borderRadius: 8 },
   notesLabel: {
     fontSize: 14,
     color: theme.colors.text,
     opacity: 0.7,
-    marginBottom: 4,
-  },
+    marginBottom: 4 },
   notesText: {
     fontSize: 14,
-    color: theme.colors.text,
-  },
+    color: theme.colors.text },
   floatActions: {
     flexDirection: 'row',
-    justifyContent: 'space-around',
-  },
+    justifyContent: 'space-around' },
   floatButton: {
     flex: 1,
-    marginHorizontal: 8,
-  },
+    marginHorizontal: 8 },
   emptyState: {
     alignItems: 'center',
     justifyContent: 'center',
-    padding: 20,
-  },
+    padding: 20 },
   emptyStateText: {
     marginTop: 10,
     marginBottom: 20,
     color: theme.colors.text,
-    opacity: 0.7,
-  },
+    opacity: 0.7 },
   initButton: {
-    backgroundColor: theme.colors.primary,
-  },
+    backgroundColor: theme.colors.primary },
   saleAmount: {
     fontSize: 16,
     fontWeight: 'bold',
     color: theme.colors.primary,
-    alignSelf: 'center',
-  },
+    alignSelf: 'center' },
   floatHistoryRight: {
     alignItems: 'flex-end',
-    justifyContent: 'center',
-  },
+    justifyContent: 'center' },
   floatHistoryStart: {
     fontSize: 14,
-    color: theme.colors.text,
-  },
+    color: theme.colors.text },
   floatHistoryEnd: {
     fontSize: 14,
     fontWeight: 'bold',
-    color: theme.colors.primary,
-  },
+    color: theme.colors.primary },
   dialog: {
     backgroundColor: theme.colors.surface,
-    borderRadius: 15,
-  },
+    borderRadius: 15 },
   dialogTitle: {
-    color: theme.colors.primary,
-  },
+    color: theme.colors.primary },
   dialogText: {
     color: theme.colors.text,
-    marginBottom: 16,
-  },
+    marginBottom: 16 },
   dialogInput: {
-    backgroundColor: theme.colors.surface,
-  },
+    backgroundColor: theme.colors.surface },
   dialogCaption: {
     marginTop: 4,
-    marginBottom: 16,
-  },
+    marginBottom: 16 },
   notesInput: {
-    marginTop: 16,
-  },
-});
+    marginTop: 16 } });
 
 export default CashFloatScreen;

@@ -1,6 +1,6 @@
 import { DefaultTheme } from 'react-native-paper';
 
-// Create a completely simplified theme with only system fonts and explicit variants
+// Completely simplified theme with NO variants to prevent crashes
 export const theme = {
   ...DefaultTheme,
   dark: true,
@@ -9,67 +9,6 @@ export const theme = {
   
   // Explicitly define fontVariant to prevent undefined errors
   fontVariant: 'regular',
-  
-  // Define all possible variants to prevent "variant not provided properly" errors
-  variants: {
-    displayLarge: {
-      fontFamily: 'System',
-      fontWeight: 'normal',
-    },
-    displayMedium: {
-      fontFamily: 'System',
-      fontWeight: 'normal',
-    },
-    displaySmall: {
-      fontFamily: 'System',
-      fontWeight: 'normal',
-    },
-    headlineLarge: {
-      fontFamily: 'System',
-      fontWeight: 'normal',
-    },
-    headlineMedium: {
-      fontFamily: 'System',
-      fontWeight: 'normal',
-    },
-    headlineSmall: {
-      fontFamily: 'System',
-      fontWeight: 'normal',
-    },
-    titleLarge: {
-      fontFamily: 'System',
-      fontWeight: 'normal',
-    },
-    titleMedium: {
-      fontFamily: 'System',
-      fontWeight: 'normal',
-    },
-    titleSmall: {
-      fontFamily: 'System',
-      fontWeight: 'normal',
-    },
-    bodyLarge: {
-      fontFamily: 'System',
-      fontWeight: 'normal',
-    },
-    bodyMedium: {
-      fontFamily: 'System',
-      fontWeight: 'normal',
-    },
-    bodySmall: 'regular', // Changed to string 'regular' to match RN Paper's expected variant
-    labelLarge: {
-      fontFamily: 'System',
-      fontWeight: 'normal',
-    },
-    labelMedium: {
-      fontFamily: 'System',
-      fontWeight: 'normal',
-    },
-    labelSmall: {
-      fontFamily: 'System',
-      fontWeight: 'normal',
-    },
-  },
   
   colors: {
     ...DefaultTheme.colors,
