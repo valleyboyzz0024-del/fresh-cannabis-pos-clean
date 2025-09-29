@@ -1,0 +1,1207 @@
+{
+  "components": 37,
+  "imports": 9,
+  "missingImports": 0,
+  "commonIssues": 12,
+  "themeUsage": 9,
+  "themeIssues": 9,
+  "deprecatedIssues": 0,
+  "details": {
+    "components": [
+      {
+        "name": "CartScreen",
+        "file": "/workspace/fresh-cannabis-pos-clean/src/screens/CartScreen.js"
+      },
+      {
+        "name": "handleQuantityChange",
+        "file": "/workspace/fresh-cannabis-pos-clean/src/screens/CartScreen.js"
+      },
+      {
+        "name": "handleRemoveItem",
+        "file": "/workspace/fresh-cannabis-pos-clean/src/screens/CartScreen.js"
+      },
+      {
+        "name": "handleClearCart",
+        "file": "/workspace/fresh-cannabis-pos-clean/src/screens/CartScreen.js"
+      },
+      {
+        "name": "handleCheckout",
+        "file": "/workspace/fresh-cannabis-pos-clean/src/screens/CartScreen.js"
+      },
+      {
+        "name": "handleViewSaleDetails",
+        "file": "/workspace/fresh-cannabis-pos-clean/src/screens/CartScreen.js"
+      },
+      {
+        "name": "handleNewSale",
+        "file": "/workspace/fresh-cannabis-pos-clean/src/screens/CartScreen.js"
+      },
+      {
+        "name": "formatCurrency",
+        "file": "/workspace/fresh-cannabis-pos-clean/src/screens/CartScreen.js"
+      },
+      {
+        "name": "CashFloatScreen",
+        "file": "/workspace/fresh-cannabis-pos-clean/src/screens/CashFloatScreen.js"
+      },
+      {
+        "name": "onRefresh",
+        "file": "/workspace/fresh-cannabis-pos-clean/src/screens/CashFloatScreen.js"
+      },
+      {
+        "name": "formatCurrency",
+        "file": "/workspace/fresh-cannabis-pos-clean/src/screens/CashFloatScreen.js"
+      },
+      {
+        "name": "formatDate",
+        "file": "/workspace/fresh-cannabis-pos-clean/src/screens/CashFloatScreen.js"
+      },
+      {
+        "name": "DashboardScreen",
+        "file": "/workspace/fresh-cannabis-pos-clean/src/screens/DashboardScreen.js"
+      },
+      {
+        "name": "onRefresh",
+        "file": "/workspace/fresh-cannabis-pos-clean/src/screens/DashboardScreen.js"
+      },
+      {
+        "name": "formatCurrency",
+        "file": "/workspace/fresh-cannabis-pos-clean/src/screens/DashboardScreen.js"
+      },
+      {
+        "name": "InventoryScreen",
+        "file": "/workspace/fresh-cannabis-pos-clean/src/screens/InventoryScreen.js"
+      },
+      {
+        "name": "onRefresh",
+        "file": "/workspace/fresh-cannabis-pos-clean/src/screens/InventoryScreen.js"
+      },
+      {
+        "name": "filterProductsByCategoryAndType",
+        "file": "/workspace/fresh-cannabis-pos-clean/src/screens/InventoryScreen.js"
+      },
+      {
+        "name": "handleCategorySelect",
+        "file": "/workspace/fresh-cannabis-pos-clean/src/screens/InventoryScreen.js"
+      },
+      {
+        "name": "handleTypeSelect",
+        "file": "/workspace/fresh-cannabis-pos-clean/src/screens/InventoryScreen.js"
+      },
+      {
+        "name": "formatCurrency",
+        "file": "/workspace/fresh-cannabis-pos-clean/src/screens/InventoryScreen.js"
+      },
+      {
+        "name": "LoginScreen",
+        "file": "/workspace/fresh-cannabis-pos-clean/src/screens/LoginScreen.js"
+      },
+      {
+        "name": "ProductDetailScreen",
+        "file": "/workspace/fresh-cannabis-pos-clean/src/screens/ProductDetailScreen.js"
+      },
+      {
+        "name": "handleAddToCart",
+        "file": "/workspace/fresh-cannabis-pos-clean/src/screens/ProductDetailScreen.js"
+      },
+      {
+        "name": "formatCurrency",
+        "file": "/workspace/fresh-cannabis-pos-clean/src/screens/ProductDetailScreen.js"
+      },
+      {
+        "name": "SaleDetailScreen",
+        "file": "/workspace/fresh-cannabis-pos-clean/src/screens/SaleDetailScreen.js"
+      },
+      {
+        "name": "formatCurrency",
+        "file": "/workspace/fresh-cannabis-pos-clean/src/screens/SaleDetailScreen.js"
+      },
+      {
+        "name": "formatDate",
+        "file": "/workspace/fresh-cannabis-pos-clean/src/screens/SaleDetailScreen.js"
+      },
+      {
+        "name": "SalesScreen",
+        "file": "/workspace/fresh-cannabis-pos-clean/src/screens/SalesScreen.js"
+      },
+      {
+        "name": "onRefresh",
+        "file": "/workspace/fresh-cannabis-pos-clean/src/screens/SalesScreen.js"
+      },
+      {
+        "name": "filterProductsByCategoryAndType",
+        "file": "/workspace/fresh-cannabis-pos-clean/src/screens/SalesScreen.js"
+      },
+      {
+        "name": "handleCategorySelect",
+        "file": "/workspace/fresh-cannabis-pos-clean/src/screens/SalesScreen.js"
+      },
+      {
+        "name": "handleTypeSelect",
+        "file": "/workspace/fresh-cannabis-pos-clean/src/screens/SalesScreen.js"
+      },
+      {
+        "name": "handleAddToCart",
+        "file": "/workspace/fresh-cannabis-pos-clean/src/screens/SalesScreen.js"
+      },
+      {
+        "name": "formatCurrency",
+        "file": "/workspace/fresh-cannabis-pos-clean/src/screens/SalesScreen.js"
+      },
+      {
+        "name": "SettingsScreen",
+        "file": "/workspace/fresh-cannabis-pos-clean/src/screens/SettingsScreen.js"
+      },
+      {
+        "name": "handleLogout",
+        "file": "/workspace/fresh-cannabis-pos-clean/src/screens/SettingsScreen.js"
+      }
+    ],
+    "imports": {
+      "CartScreen.js": [
+        {
+          "item": "StyleSheet",
+          "path": "react-native"
+        },
+        {
+          "item": "View",
+          "path": "react-native"
+        },
+        {
+          "item": "FlatList",
+          "path": "react-native"
+        },
+        {
+          "item": "Alert",
+          "path": "react-native"
+        },
+        {
+          "item": "ScrollView",
+          "path": "react-native"
+        },
+        {
+          "item": "KeyboardAvoidingView",
+          "path": "react-native"
+        },
+        {
+          "item": "Platform",
+          "path": "react-native"
+        },
+        {
+          "item": "Text",
+          "path": "react-native"
+        },
+        {
+          "item": "Surface",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Title",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Button",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "IconButton",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Divider",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "TextInput",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "ActivityIndicator",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Portal",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Dialog",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "List",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "MaterialCommunityIcons",
+          "path": "@expo/vector-icons"
+        },
+        {
+          "item": "useCart",
+          "path": "../context/CartContext"
+        },
+        {
+          "item": "theme",
+          "path": "../theme/theme"
+        },
+        {
+          "item": "shadowStyles",
+          "path": "../theme/theme"
+        },
+        {
+          "item": "speakResponse",
+          "path": "../services/voiceService"
+        }
+      ],
+      "CashFloatScreen.js": [
+        {
+          "item": "StyleSheet",
+          "path": "react-native"
+        },
+        {
+          "item": "View",
+          "path": "react-native"
+        },
+        {
+          "item": "ScrollView",
+          "path": "react-native"
+        },
+        {
+          "item": "RefreshControl",
+          "path": "react-native"
+        },
+        {
+          "item": "Alert",
+          "path": "react-native"
+        },
+        {
+          "item": "Text",
+          "path": "react-native"
+        },
+        {
+          "item": "Surface",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Title",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Button",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Divider",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "ActivityIndicator",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "TextInput",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "List",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Portal",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Dialog",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Caption",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "MaterialCommunityIcons",
+          "path": "@expo/vector-icons"
+        },
+        {
+          "item": "getTodayFloat",
+          "path": "../services/cashFloatService"
+        },
+        {
+          "item": "getFloatHistory",
+          "path": "../services/cashFloatService"
+        },
+        {
+          "item": "initializeDailyFloat",
+          "path": "../services/cashFloatService"
+        },
+        {
+          "item": "closeDailyFloat",
+          "path": "../services/cashFloatService"
+        },
+        {
+          "item": "calculateExpectedEndingAmount",
+          "path": "../services/cashFloatService"
+        },
+        {
+          "item": "autoCloseFloat",
+          "path": "../services/cashFloatService"
+        },
+        {
+          "item": "getTodaySales",
+          "path": "../services/salesService"
+        },
+        {
+          "item": "theme",
+          "path": "../theme/theme"
+        },
+        {
+          "item": "shadowStyles",
+          "path": "../theme/theme"
+        }
+      ],
+      "DashboardScreen.js": [
+        {
+          "item": "StyleSheet",
+          "path": "react-native"
+        },
+        {
+          "item": "View",
+          "path": "react-native"
+        },
+        {
+          "item": "ScrollView",
+          "path": "react-native"
+        },
+        {
+          "item": "RefreshControl",
+          "path": "react-native"
+        },
+        {
+          "item": "Text",
+          "path": "react-native"
+        },
+        {
+          "item": "Surface",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Title",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Divider",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "ActivityIndicator",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Button",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "IconButton",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "List",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "MaterialCommunityIcons",
+          "path": "@expo/vector-icons"
+        },
+        {
+          "item": "useAuth",
+          "path": "../context/AuthContext"
+        },
+        {
+          "item": "getTodaySales",
+          "path": "../services/salesService"
+        },
+        {
+          "item": "getDailySalesSummary",
+          "path": "../services/salesService"
+        },
+        {
+          "item": "getTopSellingProducts",
+          "path": "../services/salesService"
+        },
+        {
+          "item": "getTodayFloat",
+          "path": "../services/cashFloatService"
+        },
+        {
+          "item": "calculateExpectedEndingAmount",
+          "path": "../services/cashFloatService"
+        },
+        {
+          "item": "theme",
+          "path": "../theme/theme"
+        },
+        {
+          "item": "shadowStyles",
+          "path": "../theme/theme"
+        }
+      ],
+      "InventoryScreen.js": [
+        {
+          "item": "StyleSheet",
+          "path": "react-native"
+        },
+        {
+          "item": "View",
+          "path": "react-native"
+        },
+        {
+          "item": "FlatList",
+          "path": "react-native"
+        },
+        {
+          "item": "TouchableOpacity",
+          "path": "react-native"
+        },
+        {
+          "item": "RefreshControl",
+          "path": "react-native"
+        },
+        {
+          "item": "Alert",
+          "path": "react-native"
+        },
+        {
+          "item": "Text",
+          "path": "react-native"
+        },
+        {
+          "item": "Surface",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Title",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Searchbar",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Button",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "FAB",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Chip",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "ActivityIndicator",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "IconButton",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Portal",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Dialog",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "TextInput",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Divider",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "MaterialCommunityIcons",
+          "path": "@expo/vector-icons"
+        },
+        {
+          "item": "getProducts",
+          "path": "../services/productService"
+        },
+        {
+          "item": "searchProducts",
+          "path": "../services/productService"
+        },
+        {
+          "item": "addProduct",
+          "path": "../services/productService"
+        },
+        {
+          "item": "theme",
+          "path": "../theme/theme"
+        },
+        {
+          "item": "shadowStyles",
+          "path": "../theme/theme"
+        },
+        {
+          "item": "ScrollView",
+          "path": "react-native"
+        }
+      ],
+      "LoginScreen.js": [
+        {
+          "item": "StyleSheet",
+          "path": "react-native"
+        },
+        {
+          "item": "View",
+          "path": "react-native"
+        },
+        {
+          "item": "Image",
+          "path": "react-native"
+        },
+        {
+          "item": "KeyboardAvoidingView",
+          "path": "react-native"
+        },
+        {
+          "item": "Platform",
+          "path": "react-native"
+        },
+        {
+          "item": "Pressable",
+          "path": "react-native"
+        },
+        {
+          "item": "Keyboard",
+          "path": "react-native"
+        },
+        {
+          "item": "StatusBar",
+          "path": "react-native"
+        },
+        {
+          "item": "Dimensions",
+          "path": "react-native"
+        },
+        {
+          "item": "Text",
+          "path": "react-native"
+        },
+        {
+          "item": "TextInput",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Button",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Surface",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "ActivityIndicator",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Title",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "useAuth",
+          "path": "../context/AuthContext"
+        },
+        {
+          "item": "theme",
+          "path": "../theme/theme"
+        },
+        {
+          "item": "shadowStyles",
+          "path": "../theme/theme"
+        }
+      ],
+      "ProductDetailScreen.js": [
+        {
+          "item": "StyleSheet",
+          "path": "react-native"
+        },
+        {
+          "item": "View",
+          "path": "react-native"
+        },
+        {
+          "item": "ScrollView",
+          "path": "react-native"
+        },
+        {
+          "item": "Alert",
+          "path": "react-native"
+        },
+        {
+          "item": "Text",
+          "path": "react-native"
+        },
+        {
+          "item": "Surface",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Title",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Button",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Divider",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "ActivityIndicator",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Chip",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "TextInput",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "IconButton",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "MaterialCommunityIcons",
+          "path": "@expo/vector-icons"
+        },
+        {
+          "item": "getProductById",
+          "path": "../services/productService"
+        },
+        {
+          "item": "updateProduct",
+          "path": "../services/productService"
+        },
+        {
+          "item": "useCart",
+          "path": "../context/CartContext"
+        },
+        {
+          "item": "theme",
+          "path": "../theme/theme"
+        },
+        {
+          "item": "shadowStyles",
+          "path": "../theme/theme"
+        }
+      ],
+      "SaleDetailScreen.js": [
+        {
+          "item": "StyleSheet",
+          "path": "react-native"
+        },
+        {
+          "item": "View",
+          "path": "react-native"
+        },
+        {
+          "item": "ScrollView",
+          "path": "react-native"
+        },
+        {
+          "item": "Share",
+          "path": "react-native"
+        },
+        {
+          "item": "Platform",
+          "path": "react-native"
+        },
+        {
+          "item": "Text",
+          "path": "react-native"
+        },
+        {
+          "item": "Surface",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Title",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Button",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Divider",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "ActivityIndicator",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "List",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "IconButton",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Caption",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "MaterialCommunityIcons",
+          "path": "@expo/vector-icons"
+        },
+        {
+          "item": "getSaleDetails",
+          "path": "../services/salesService"
+        },
+        {
+          "item": "theme",
+          "path": "../theme/theme"
+        },
+        {
+          "item": "shadowStyles",
+          "path": "../theme/theme"
+        }
+      ],
+      "SalesScreen.js": [
+        {
+          "item": "StyleSheet",
+          "path": "react-native"
+        },
+        {
+          "item": "View",
+          "path": "react-native"
+        },
+        {
+          "item": "FlatList",
+          "path": "react-native"
+        },
+        {
+          "item": "TouchableOpacity",
+          "path": "react-native"
+        },
+        {
+          "item": "RefreshControl",
+          "path": "react-native"
+        },
+        {
+          "item": "Dimensions",
+          "path": "react-native"
+        },
+        {
+          "item": "Platform",
+          "path": "react-native"
+        },
+        {
+          "item": "Alert",
+          "path": "react-native"
+        },
+        {
+          "item": "Text",
+          "path": "react-native"
+        },
+        {
+          "item": "Surface",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Title",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Searchbar",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Button",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "FAB",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Chip",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "ActivityIndicator",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "IconButton",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "List",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Divider",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Portal",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Dialog",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "MaterialCommunityIcons",
+          "path": "@expo/vector-icons"
+        },
+        {
+          "item": "useCart",
+          "path": "../context/CartContext"
+        },
+        {
+          "item": "getProducts",
+          "path": "../services/productService"
+        },
+        {
+          "item": "searchProducts",
+          "path": "../services/productService"
+        },
+        {
+          "item": "startVoiceRecognition",
+          "path": "../services/voiceService"
+        },
+        {
+          "item": "handleVoiceCommand",
+          "path": "../services/voiceService"
+        },
+        {
+          "item": "isMobileVoiceSupported",
+          "path": "../services/voiceService"
+        },
+        {
+          "item": "requestVoicePermissions",
+          "path": "../services/voiceService"
+        },
+        {
+          "item": "theme",
+          "path": "../theme/theme"
+        },
+        {
+          "item": "shadowStyles",
+          "path": "../theme/theme"
+        },
+        {
+          "item": "ScrollView",
+          "path": "react-native"
+        }
+      ],
+      "SettingsScreen.js": [
+        {
+          "item": "StyleSheet",
+          "path": "react-native"
+        },
+        {
+          "item": "View",
+          "path": "react-native"
+        },
+        {
+          "item": "ScrollView",
+          "path": "react-native"
+        },
+        {
+          "item": "Alert",
+          "path": "react-native"
+        },
+        {
+          "item": "Linking",
+          "path": "react-native"
+        },
+        {
+          "item": "Text",
+          "path": "react-native"
+        },
+        {
+          "item": "Surface",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Title",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Button",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Divider",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "List",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Switch",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Portal",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "Dialog",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "TextInput",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "IconButton",
+          "path": "react-native-paper"
+        },
+        {
+          "item": "MaterialCommunityIcons",
+          "path": "@expo/vector-icons"
+        },
+        {
+          "item": "useAuth",
+          "path": "../context/AuthContext"
+        },
+        {
+          "item": "changePassword",
+          "path": "../services/authService"
+        },
+        {
+          "item": "theme",
+          "path": "../theme/theme"
+        },
+        {
+          "item": "shadowStyles",
+          "path": "../theme/theme"
+        }
+      ]
+    },
+    "missingImports": [],
+    "commonIssues": [
+      {
+        "file": "CartScreen.js",
+        "issue": "Inline styles used (consider using StyleSheet)",
+        "severity": "info"
+      },
+      {
+        "file": "CashFloatScreen.js",
+        "issue": "Inline styles used (consider using StyleSheet)",
+        "severity": "info"
+      },
+      {
+        "file": "DashboardScreen.js",
+        "issue": "Inline styles used (consider using StyleSheet)",
+        "severity": "info"
+      },
+      {
+        "file": "InventoryScreen.js",
+        "issue": "Inline styles used (consider using StyleSheet)",
+        "severity": "info"
+      },
+      {
+        "file": "InventoryScreen.js",
+        "issue": "Hardcoded colors found (use theme.colors instead)",
+        "severity": "info"
+      },
+      {
+        "file": "LoginScreen.js",
+        "issue": "Inline styles used (consider using StyleSheet)",
+        "severity": "info"
+      },
+      {
+        "file": "ProductDetailScreen.js",
+        "issue": "Inline styles used (consider using StyleSheet)",
+        "severity": "info"
+      },
+      {
+        "file": "SaleDetailScreen.js",
+        "issue": "Inline styles used (consider using StyleSheet)",
+        "severity": "info"
+      },
+      {
+        "file": "SalesScreen.js",
+        "issue": "Inline styles used (consider using StyleSheet)",
+        "severity": "info"
+      },
+      {
+        "file": "SalesScreen.js",
+        "issue": "console.log statements found (remove in production)",
+        "severity": "info"
+      },
+      {
+        "file": "SalesScreen.js",
+        "issue": "Hardcoded colors found (use theme.colors instead)",
+        "severity": "info"
+      },
+      {
+        "file": "SettingsScreen.js",
+        "issue": "Inline styles used (consider using StyleSheet)",
+        "severity": "info"
+      }
+    ],
+    "themeUsage": {
+      "CartScreen.js": {
+        "colors": [
+          "text",
+          "error",
+          "disabled",
+          "success",
+          "primary",
+          "background",
+          "surface"
+        ],
+        "fonts": []
+      },
+      "CashFloatScreen.js": {
+        "colors": [
+          "primary",
+          "disabled",
+          "text",
+          "background",
+          "surface",
+          "error"
+        ],
+        "fonts": []
+      },
+      "DashboardScreen.js": {
+        "colors": [
+          "primary",
+          "background",
+          "text",
+          "surface"
+        ],
+        "fonts": []
+      },
+      "InventoryScreen.js": {
+        "colors": [
+          "primary",
+          "text",
+          "disabled",
+          "background",
+          "surface",
+          "error"
+        ],
+        "fonts": []
+      },
+      "LoginScreen.js": {
+        "colors": [
+          "background",
+          "primary",
+          "surface",
+          "text",
+          "error"
+        ],
+        "fonts": []
+      },
+      "ProductDetailScreen.js": {
+        "colors": [
+          "primary",
+          "error",
+          "disabled",
+          "text",
+          "background",
+          "surface"
+        ],
+        "fonts": []
+      },
+      "SaleDetailScreen.js": {
+        "colors": [
+          "primary",
+          "error",
+          "disabled",
+          "background",
+          "text",
+          "surface"
+        ],
+        "fonts": []
+      },
+      "SalesScreen.js": {
+        "colors": [
+          "primary",
+          "text",
+          "disabled",
+          "error",
+          "success",
+          "background",
+          "surface"
+        ],
+        "fonts": []
+      },
+      "SettingsScreen.js": {
+        "colors": [
+          "primary",
+          "text",
+          "background",
+          "surface",
+          "error"
+        ],
+        "fonts": []
+      }
+    },
+    "themeIssues": [
+      {
+        "file": "CartScreen.js",
+        "issue": "Unsafe theme.colors access (missing null check)",
+        "severity": "warning"
+      },
+      {
+        "file": "CashFloatScreen.js",
+        "issue": "Unsafe theme.colors access (missing null check)",
+        "severity": "warning"
+      },
+      {
+        "file": "DashboardScreen.js",
+        "issue": "Unsafe theme.colors access (missing null check)",
+        "severity": "warning"
+      },
+      {
+        "file": "InventoryScreen.js",
+        "issue": "Unsafe theme.colors access (missing null check)",
+        "severity": "warning"
+      },
+      {
+        "file": "LoginScreen.js",
+        "issue": "Unsafe theme.colors access (missing null check)",
+        "severity": "warning"
+      },
+      {
+        "file": "ProductDetailScreen.js",
+        "issue": "Unsafe theme.colors access (missing null check)",
+        "severity": "warning"
+      },
+      {
+        "file": "SaleDetailScreen.js",
+        "issue": "Unsafe theme.colors access (missing null check)",
+        "severity": "warning"
+      },
+      {
+        "file": "SalesScreen.js",
+        "issue": "Unsafe theme.colors access (missing null check)",
+        "severity": "warning"
+      },
+      {
+        "file": "SettingsScreen.js",
+        "issue": "Unsafe theme.colors access (missing null check)",
+        "severity": "warning"
+      }
+    ],
+    "deprecatedIssues": []
+  }
+}

@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import { 
-  StyleSheet,
+import { StyleSheet,
   View,
   FlatList,
   Alert,
   ScrollView,
   KeyboardAvoidingView,
-  Platform,
+  Platform  ,
   Text
 } from 'react-native';
 import { 

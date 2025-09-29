@@ -41,10 +41,10 @@ export function useHeaderConfigProps({
   }
 
   const theme = useTheme();
-  // Defensive patch: always provide theme.fonts.regular
-  if (!theme.fonts || !theme.fonts.regular) {
+  // Defensive patch: always provide (theme.fonts && theme.fonts.regular ? theme.fonts.regular : {fontFamily: "System", fontWeight: "normal"})
+  if (!theme.fonts || !(theme.fonts && theme.fonts.regular ? theme.fonts.regular : {fontFamily: "System", fontWeight: "normal"})) {
     theme.fonts = theme.fonts || {};
-    theme.fonts.regular = { fontFamily: 'System', fontWeight: 'normal' };
+    (theme.fonts && theme.fonts.regular ? theme.fonts.regular : {fontFamily: "System", fontWeight: "normal"}) = { fontFamily: 'System', fontWeight: 'normal' };
   }
 
   const { direction } = useLocale();
@@ -60,9 +60,9 @@ export function useHeaderConfigProps({
   const headerLargeStyleFlattened = StyleSheet.flatten(headerLargeStyle) || {};
   
   // Defensive fontFamily fallback for all header titles
-  const backTitleFontFamily = headerBackTitleStyleFlattened.fontFamily || theme.fonts.regular.fontFamily;
-  const largeTitleFontFamily = headerLargeTitleStyleFlattened.fontFamily || theme.fonts.regular.fontFamily;
-  const titleFontFamily = headerTitleStyleFlattened.fontFamily || theme.fonts.regular.fontFamily;
+  const backTitleFontFamily = headerBackTitleStyleFlattened.fontFamily || (theme.fonts && theme.fonts.regular ? theme.fonts.regular : {fontFamily: "System", fontWeight: "normal"}).fontFamily;
+  const largeTitleFontFamily = headerLargeTitleStyleFlattened.fontFamily || (theme.fonts && theme.fonts.regular ? theme.fonts.regular : {fontFamily: "System", fontWeight: "normal"}).fontFamily;
+  const titleFontFamily = headerTitleStyleFlattened.fontFamily || (theme.fonts && theme.fonts.regular ? theme.fonts.regular : {fontFamily: "System", fontWeight: "normal"}).fontFamily;
   
   const backTitleFontSize = 'fontSize' in headerBackTitleStyleFlattened ? headerBackTitleStyleFlattened.fontSize : undefined;
   
@@ -87,7 +87,7 @@ export function useHeaderConfigProps({
   if (headerTitleStyleFlattened.fontFamily != null) {
     headerTitleStyleSupported.fontFamily = headerTitleStyleFlattened.fontFamily;
   } else {
-    headerTitleStyleSupported.fontFamily = theme.fonts.regular.fontFamily;
+    headerTitleStyleSupported.fontFamily = (theme.fonts && theme.fonts.regular ? theme.fonts.regular : {fontFamily: "System", fontWeight: "normal"}).fontFamily;
   }
   
   if (titleFontSize != null) {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { 
+import {
   StyleSheet,
   View,
   Image,
@@ -20,8 +20,9 @@ import {
 } from 'react-native-paper';
 import { useAuth } from '../context/AuthContext';
 import { theme, shadowStyles } from '../theme/theme';
+import { getSafeThemeValue, getSafeFontSize } from '../theme/themeHelper';
 
-const { width } = Dimensions.get('window');
+const { width, height } = Dimensions.get('window');
 
 const LoginScreen = ({ navigation }) => {
   const [username, setUsername] = useState('');
@@ -48,17 +49,24 @@ const LoginScreen = ({ navigation }) => {
   };
 
   return (
-    <Pressable onPress={Keyboard.dismiss}>
+    <Pressable 
+      onPress={Keyboard.dismiss}
+      style={styles.container}
+    >
       <KeyboardAvoidingView 
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-        style={styles.container}
+        style={styles.keyboardView}
       >
         <StatusBar barStyle="light-content" backgroundColor={theme.colors.background} />
         
         <Surface style={styles.loginContainer}>
           <View style={styles.logoContainer}>
-            <Title style={styles.appTitle}>Cannabis POS</Title>
-            <Text variant="bodyMedium" style={styles.appSubtitle}>Point of Sale System</Text>
+            <Image 
+              source={require('../../assets/new/cannaflow-logo.png')} 
+              style={styles.logo} 
+              resizeMode="contain"
+            />
+            <Text style={styles.appSubtitle}>Seamless from seed to sale</Text>
           </View>
           
           <View style={styles.formContainer}>
@@ -101,7 +109,7 @@ const LoginScreen = ({ navigation }) => {
               Login
             </Button>
             
-            <Text variant="bodyMedium" style={styles.helpText}>
+            <Text style={styles.helpText}>
               Default login: admin / admin123
             </Text>
           </View>
@@ -115,46 +123,61 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: theme.colors.background,
+  },
+  keyboardView: {
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 20 },
+    padding: 20
+  },
   loginContainer: {
     width: width > 500 ? 450 : '100%',
     padding: 30,
     borderRadius: 15,
     backgroundColor: theme.colors.surface,
-    ...shadowStyles.large },
+    ...shadowStyles.large
+  },
   logoContainer: {
     alignItems: 'center',
-    marginBottom: 30 },
-  appTitle: {
-    fontSize: 28,
-    fontWeight: 'bold',
-    color: theme.colors.primary,
-    marginBottom: 5 },
+    marginBottom: 30
+  },
+  logo: {
+    width: 200,
+    height: 120,
+    marginBottom: 10
+  },
   appSubtitle: {
-    fontSize: 16,
+    fontSize: getSafeFontSize(theme, 'medium'),
     color: theme.colors.text,
-    opacity: 0.8 },
+    opacity: 0.8,
+    marginTop: 5
+  },
   formContainer: {
-    width: '100%' },
+    width: '100%'
+  },
   input: {
     marginBottom: 15,
-    backgroundColor: theme.colors.surface },
+    backgroundColor: theme.colors.surface
+  },
   loginButton: {
     marginTop: 10,
     borderRadius: 8,
-    backgroundColor: theme.colors.primary },
+    backgroundColor: theme.colors.primary
+  },
   loginButtonContent: {
-    height: 50 },
+    height: 50
+  },
   errorText: {
     color: theme.colors.error,
     marginBottom: 10,
-    textAlign: 'center' },
+    textAlign: 'center'
+  },
   helpText: {
     marginTop: 20,
     textAlign: 'center',
     color: theme.colors.text,
-    opacity: 0.7 } });
+    opacity: 0.7
+  }
+});
 
 export default LoginScreen;

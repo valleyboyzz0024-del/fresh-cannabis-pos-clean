@@ -1,10 +1,9 @@
 import React, { useState , useEffect} from 'react';
-import { 
-  StyleSheet,
+import { StyleSheet,
   View,
   ScrollView,
   Share,
-  Platform,
+  Platform  ,
   Text
 } from 'react-native';
 import { 

@@ -1,11 +1,10 @@
 import React, { useState , useEffect} from 'react';
-import { 
-  StyleSheet,
+import { StyleSheet,
   View,
   FlatList,
   TouchableOpacity,
   RefreshControl,
-  Alert,
+  Alert  ,
   Text
 } from 'react-native';
 import { 
