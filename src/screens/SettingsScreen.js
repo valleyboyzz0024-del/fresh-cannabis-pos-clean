@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { 
-  StyleSheet,
+import { StyleSheet,
   View,
   ScrollView,
   Alert,
-  Linking,
+  Linking  ,
   Text
 } from 'react-native';
 import { 

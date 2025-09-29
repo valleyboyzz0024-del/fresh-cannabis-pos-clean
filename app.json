@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Cannabis POS",
-    "slug": "cannabis-pos-app",
+    "name": "CannaFlow",
+    "slug": "cannaflow-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -37,7 +37,13 @@
       "edgeToEdgeEnabled": true
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "backgroundColor": "#121212",
+      "themeColor": "#1E8942",
+      "description": "CannaFlow - Seamless from seed to sale",
+      "lang": "en",
+      "name": "CannaFlow",
+      "shortName": "CannaFlow"
     },
     "plugins": [
       [
@@ -46,6 +52,7 @@
           "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera to scan barcodes."
         }
       ]
-    ]
+    ],
+    "description": "CannaFlow - Seamless from seed to sale. A comprehensive point of sale system for cannabis retailers."
   }
 }

@@ -1,9 +1,8 @@
 import React, { useState , useEffect} from 'react';
-import { 
-  StyleSheet,
+import { StyleSheet,
   View,
   ScrollView,
-  RefreshControl,
+  RefreshControl  ,
   Text
 } from 'react-native';
 import { 

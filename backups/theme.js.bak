@@ -1,6 +1,6 @@
 import { DefaultTheme } from 'react-native-paper';
 
-// Updated theme with CannaFlow branding colors
+// Completely simplified theme with NO variants to prevent crashes
 export const theme = {
   ...DefaultTheme,
   dark: true,
@@ -12,16 +12,15 @@ export const theme = {
   
   colors: {
     ...DefaultTheme.colors,
-    primary: '#1E8942', // Main green from CannaFlow logo
-    accent: '#4ECBA5',  // Lighter green from CannaFlow logo
-    secondary: '#1E8942', // Secondary color
+    primary: '#D4AF37', // Gold
+    accent: '#D4AF37',  // Gold
     background: '#121212',
     surface: '#1E1E1E',
     text: '#FFFFFF',
     disabled: '#757575',
     placeholder: '#9E9E9E',
     backdrop: 'rgba(0, 0, 0, 0.5)',
-    notification: '#1E8942',
+    notification: '#D4AF37',
     error: '#CF6679',
     success: '#4CAF50',
     warning: '#FF9800',
@@ -144,16 +143,6 @@ export const theme = {
       fontWeight: 'bold',
       fontSize: 57,
     }
-  },
-  
-  // Font sizes explicitly defined to prevent crashes
-  fontSizes: {
-    small: 12,
-    medium: 14,
-    large: 16,
-    xlarge: 20,
-    xxlarge: 24,
-    xxxlarge: 32
   }
 };
 
@@ -200,25 +189,4 @@ export const shadowStyles = {
     boxShadowRadius: 7.49,
     elevation: 6,
   },
-};
-
-// Helper function to safely access theme properties
-export const getThemeValue = (obj, path, fallback = '') => {
-  try {
-    const keys = path.split('.');
-    let result = obj;
-    
-    for (const key of keys) {
-      if (result && typeof result === 'object' && key in result) {
-        result = result[key];
-      } else {
-        return fallback;
-      }
-    }
-    
-    return result || fallback;
-  } catch (error) {
-    console.warn(`Error accessing theme path: ${path}`, error);
-    return fallback;
-  }
 };
